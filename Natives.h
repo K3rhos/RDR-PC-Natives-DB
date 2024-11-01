@@ -7,67 +7,51 @@
 
 
 
-typedef int Player;
-typedef int Entity;
-typedef Entity Ped;
-typedef Entity Vehicle;
-typedef Entity Object;
-typedef uint32_t Hash;
-typedef int Cam;
-typedef int FireId;
-typedef int CarGenerator;
-typedef int Group;
-typedef int Train;
-typedef int Pickup;
-typedef int Object;
-typedef int Interior;
-typedef int Blip;
-typedef int Texture;
-typedef int TextureDict;
-typedef int CoverPoint;
-typedef int Camera;
-typedef int TaskSequence;
-typedef int ColourIndex;
-typedef int Sphere;
-typedef int ScrHandle;
-typedef int DecisionMaker;
-typedef int ScriptAny;
-typedef int UnkInt;
-typedef int Actor;
-typedef int Controller;
-typedef int Layout;
-typedef int Iterator;
-typedef int IterationSet;
-typedef int GUIWindow;
-typedef float Time;
+using Player = int;
+using Actor = int;
+using Vehicle = int;
+using Weapon = int;
+using Object = int;
+using Train = int;
+using Pickup = int;
+using Blip = int;
+using Camera = int;
+using Controller = int;
+using Layout = int;
+using Iterator = int;
+using IterationSet = int;
+using GUIWindow = int;
+
+using Hash = uint32_t;
+using Time = float;
 
 
 
 namespace Rage
 {
-	static int FLOOR(float x) { return Invoke<0x32E9BE04, int>(x); }
-	static float SIN_DEGREE(float x) { return Invoke<0x55842354, float>(x); }
-	static float COS_DEGREE(float x) { return Invoke<0x430207A4, float>(x); }
-	static float TAN_DEGREE(float x) { return Invoke<0x9BD37A3D, float>(x); }
-	static float ATAN_DEGREE(float x) { return Invoke<0x69BE2817, float>(x); }
-	static float ATAN2_DEGREE(float x, float y) { return Invoke<0x8A0D25F2, float>(x, y); }
+	static int FLOOR(float _X) { return Invoke<0x32E9BE04, int>(_X); }
+	static float SIN_DEGREE(float _X) { return Invoke<0x55842354, float>(_X); }
+	static float COS_DEGREE(float _X) { return Invoke<0x430207A4, float>(_X); }
+	static float TAN_DEGREE(float _X) { return Invoke<0x9BD37A3D, float>(_X); }
+	static float ATAN_DEGREE(float _X) { return Invoke<0x69BE2817, float>(_X); }
+	static float ATAN2_DEGREE(float _X, float _Y) { return Invoke<0x8A0D25F2, float>(_X, _Y); }
 	static void UNK_0x0728B211() { Invoke<0x0728B211, void>(); }
 	static void UNK_0xF037DCA2(int pram0) { Invoke<0xF037DCA2, void>(pram0); }
 	static void UNK_0x1F0CD262(int pram0) { Invoke<0x1F0CD262, void>(pram0); }
 	static void RETRIEVE_GAME_STATE(int pram0, int pram1, int pram2) { Invoke<0x48FBB83D, void>(pram0, pram1, pram2); }
-	static void UI_DISABLE(const char* uiLayer) { Invoke<0xC4532F84, void>(uiLayer); }
-	static void UI_EXCLUDE(const char* uiLayer) { Invoke<0x4A005F2A, void>(uiLayer); }
-	static void UI_ENABLE(const char* uiLayer) { Invoke<0xE576DCAD, void>(uiLayer); }
-	static void UI_INCLUDE(const char* uiLayer) { Invoke<0x209255AD, void>(uiLayer); }
+	static void UI_DISABLE(const char* _UILayer) { Invoke<0xC4532F84, void>(_UILayer); }
+	static void UI_EXCLUDE(const char* _UILayer) { Invoke<0x4A005F2A, void>(_UILayer); }
+	static void UI_ENABLE(const char* _UILayer) { Invoke<0xE576DCAD, void>(_UILayer); }
+	static void UI_INCLUDE(const char* _UILayer) { Invoke<0x209255AD, void>(_UILayer); }
 	static int UNK_0x3B004817() { return Invoke<0x3B004817, int>(); }
 	static void SET_RICH_PRESENCE(int pram0, int pram1, int pram2, int pram3, int pram4) { Invoke<0x7BDCBD45, void>(pram0, pram1, pram2, pram3, pram4); }
 	static bool UNK_0x7CE2C2E1() { return Invoke<0x7CE2C2E1, bool>(); }
 	static void UNK_0x49E4EB10(int pram0) { Invoke<0x49E4EB10, void>(pram0); }
 	static void TOGGLE_COVER_PROPS(int pram0) { Invoke<0x288E4BFB, void>(pram0); }
-	static void LOG_MESSAGE(char* message) { Invoke<0x676167C3, void>(message); }
+	static void LOG_MESSAGE(char* _Message) { Invoke<0x676167C3, void>(_Message); }
 	static bool UNK_0x814D97E8() { return Invoke<0x814D97E8, bool>(); }
 	static const char* UNK_0x6CD7DCE1(int pram0, int pram1) { Invoke<0x6CD7DCE1, const char*>(pram0, pram1); }
-	static int RAND_INT_RANGE(int min, int max) { return Invoke<0xF8D0D165, int>(min, max); }
+	static int RAND_INT_RANGE(int _Min, int _Max) { return Invoke<0xF8D0D165, int>(_Min, _Max); }
 	static int TO_FLOAT(int pram0) { return Invoke<0x67116627, int>(pram0); }
 	static bool UI_ISACTIVE(const char* UiLayer) { return Invoke<0xB1FDB70D, bool>(UiLayer); }
 	static void UI_ACTIVATE(const char* UiLayer) { Invoke<0xD11BD55A, void>(UiLayer); }
@@ -126,7 +110,7 @@ namespace Rage
 	static void UNK_0xB35C0660(int pram0) { Invoke<0xB35C0660, void>(pram0); }
 	static int DECOR_GET_INT(int pram0, int pram1) { return Invoke<0xDDDE59B5, int>(pram0, pram1); }
 	static void UNK_0x0E4B7A33(int pram0, int pram1) { Invoke<0x0E4B7A33, void>(pram0, pram1); }
-	static void GIVE_WEAPON_TO_ACTOR(Actor Actor, int WeaponID, int Unk0, int Unk1, int _Unk1) { Invoke<0x6AA0EAF2, void>(Actor, WeaponID, Unk0, Unk1, _Unk1); }
+	static void GIVE_WEAPON_TO_ACTOR(Actor _Actor, WeaponModel _WeaponModel, int _Unk0, int _Unk1, int _Unk2) { Invoke<0x6AA0EAF2, void>(_Actor, _WeaponModel, _Unk0, _Unk1, _Unk2); }
 	static int ADD_ITEM(const char* ItemName, Actor Actor, int Unk1) { return Invoke<0xBAA5D41B, int>(ItemName, Actor, Unk1); }
 	static void SET_PLAYER_DEADEYE_POINTS(int pram0, int pram1, int pram2) { Invoke<0x50D8C840, void>(pram0, pram1, pram2); }
 	static void SET_DISABLE_DEADEYE(int pram0, int pram1) { Invoke<0x09716951, void>(pram0, pram1); }
@@ -183,7 +167,7 @@ namespace Rage
 	static const char* _FLOAT_TO_STRING(float Flt, int unk3, int Precision) { return Invoke<0x8ED1FF95, const char*>(Flt, unk3, Precision); }
 	static const char* INT_TO_STRING(int i) { return Invoke<0x270307B4, const char*>(i); }
 	static void CLEAR_STAT_MESSAGE() { Invoke<0x906E0138, void>(); }
-	static int STRING_TO_HASH(int pram0) { return Invoke<0x84415E28, int>(pram0); }
+	static Hash STRING_TO_HASH(const char* _Str) { return Invoke<0x84415E28, Hash>(_Str); }
 	static void SET_STAT_MESSAGE(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6, int pram7, int pram8, int pram9, int pram10, int pram11, int pram12) { Invoke<0x73DA6AF1, void>(pram0, pram1, pram2, pram3, pram4, pram5, pram6, pram7, pram8, pram9, pram10, pram11, pram12); }
 	static bool IS_STRING_VALID(const char* pram0) { return Invoke<0xBDC61056, bool>(pram0); }
 	static void _LOG_WARNING(char* message) { Invoke<0xFD25473E, void>(message); }
@@ -191,8 +175,8 @@ namespace Rage
 	static int SHIFT_LEFT(int pram0, int pram1) { return Invoke<0x314CC6CD, int>(pram0, pram1); }
 	static int UNK_0x7AB722D8() { return Invoke<0x7AB722D8, int>(); }
 	static int UNK_0x84B0B5D6() { return Invoke<0x84B0B5D6, int>(); }
-	static int IS_ACTOR_ALIVE(int pram0) { return Invoke<0x2F232639, int>(pram0); }
-	static void SET_WEAPON_GOLD(Actor Actor, int Weapon, bool Gold) { Invoke<0xAE44869D, void>(Actor, Weapon, Gold); }
+	static int IS_ACTOR_ALIVE(Actor _Actor) { return Invoke<0x2F232639, int>(_Actor); }
+	static void SET_WEAPON_GOLD(Actor _Actor, Weapon _Weapon, bool _Gold) { Invoke<0xAE44869D, void>(_Actor, _Weapon, _Gold); }
 	static void UNK_0x7D6A8D4A(int pram0, int pram1) { Invoke<0x7D6A8D4A, void>(pram0, pram1); }
 	static int HAS_ACHIEVEMENT_BEEN_PASSED(int pram0) { return Invoke<0x136A5BE9, int>(pram0); }
 	static int AWARD_ACHIEVEMENT(int pram0) { return Invoke<0xCAA24B1A, int>(pram0); }
@@ -222,7 +206,7 @@ namespace Rage
 	static int UNK_0x78A3CD3D(int pram0) { return Invoke<0x78A3CD3D, int>(pram0); }
 	static int UNK_0x7F4D5AE0(int pram0, int pram1) { return Invoke<0x7F4D5AE0, int>(pram0, pram1); }
 	static int IS_FRONTEND_DEATH(int pram0, int pram1, int pram2) { return Invoke<0xE224AC6F, int>(pram0, pram1, pram2); }
-	static Weapon GET_WEAPON_EQUIPPED(Actor Actor, int Index) { return Invoke<0x42C0FAAA, Weapon>(Actor, Index); }
+	static Weapon GET_WEAPON_EQUIPPED(Actor _Actor, int _Index) { return Invoke<0x42C0FAAA, Weapon>(_Actor, _Index); }
 	static int UNK_0x0E0EFB13(int pram0) { return Invoke<0x0E0EFB13, int>(pram0); }
 	static int UNK_0x2C23CBE7(int pram0) { return Invoke<0x2C23CBE7, int>(pram0); }
 	static int UNK_0x608DCAEF(int pram0, int pram1) { return Invoke<0x608DCAEF, int>(pram0, pram1); }
@@ -352,7 +336,7 @@ namespace Rage
 	static int UNK_0x4A2063EC(int pram0) { return Invoke<0x4A2063EC, int>(pram0); }
 	static int GET_OBJECT_ORIENTATION(int pram0, int pram1) { return Invoke<0x27B7D6D6, int>(pram0, pram1); }
 	static Layout UNK_0xADE13224() { return Invoke<0xADE13224, Layout>(); }
-	static Actor CREATE_ACTOR_IN_LAYOUT(Layout Layout, const char* ActorName, eActor ActorID, Vector3 Position, Vector3 Rotation) { return Invoke<0x8D67F397, Actor>(Layout, ActorName, ActorID, Position, Rotation); }
+	static Actor CREATE_ACTOR_IN_LAYOUT(Layout _Layout, const char* _ActorName, ActorModel _ActorModel, Vector3 _Position, Vector3 _Rotation) { return Invoke<0x8D67F397, Actor>(_Layout, _ActorName, _ActorModel, _Position, _Rotation); }
 	static void TASK_STAND_STILL(int pram0, int pram1, int pram2, int pram3) { Invoke<0x6F80965D, void>(pram0, pram1, pram2, pram3); }
 	static int STRING_LOWER(int pram0) { return Invoke<0x3E785560, int>(pram0); }
 	static void KILL_ACTOR(int pram0) { Invoke<0x8B08ECA2, void>(pram0); }
@@ -540,7 +524,7 @@ namespace Rage
 	static void UNK_0x9C80A3A4(int pram0, int pram1, int pram2, int pram3, int pram4) { Invoke<0x9C80A3A4, void>(pram0, pram1, pram2, pram3, pram4); }
 	static void EQUIP_ACCESSORY(int pram0, int pram1, int pram2) { Invoke<0x5A80659D, void>(pram0, pram1, pram2); }
 	static int UNK_0xA677B204(int pram0) { return Invoke<0xA677B204, int>(pram0); }
-	static int ACTOR_HAS_WEAPON(int pram0, int pram1) { return Invoke<0x0D47CFBD, int>(pram0, pram1); }
+	static bool ACTOR_HAS_WEAPON(Actor _Actor, Weapon _Weapon) { return Invoke<0x0D47CFBD, bool>(_Actor, _Weapon); }
 	static int UNK_0xFEEC4EE2(int pram0) { return Invoke<0xFEEC4EE2, int>(pram0); }
 	static void ENABLE_WEATHER_SPHERE(int pram0, int pram1) { Invoke<0x17BCED9F, void>(pram0, pram1); }
 	static void UNK_0xC0556FB8(int pram0, int pram1) { Invoke<0xC0556FB8, void>(pram0, pram1); }
@@ -864,7 +848,7 @@ namespace Rage
 	static int _PUSH_NEG_ONE() { return Invoke<0xB114332D, int>(); }
 	static void UNK_0x45589499(int pram0) { Invoke<0x45589499, void>(pram0); }
 	static int GUI_SET_TEXT(int TextHandle, const char* MenuName) { return Invoke<0x5F3A1C35, int>(TextHandle, MenuName); }
-	static bool _IS_KEY_PRESSED(eKey KeyCode) { return Invoke<0xCBC97619, bool>(KeyCode); }
+	static bool _IS_KEY_PRESSED(KeyCode _KeyCode) { return Invoke<0xCBC97619, bool>(_KeyCode); }
 	static int GUI_MAKE_TEXT(int GUIHandle, int Position, const char* MenuTitle, const char* GXTText, float pram4) { return Invoke<0x68FC1001, int>(GUIHandle, Position, MenuTitle, GXTText, pram4); }
 	static int GUI_SET_TEXT_COLOR(int TextHandle, float* ColorArea) { return Invoke<0x7600ED4B, int>(TextHandle, ColorArea); }
 	static Controller _GET_ACTOR_CONTROLLER(int ActorId) { return Invoke<0x524F6981, Controller>(ActorId); }
@@ -920,7 +904,7 @@ namespace Rage
 	static int UNK_0x9398BE8F(int pram0) { return Invoke<0x9398BE8F, int>(pram0); }
 	static bool ENABLE_VEHICLE_SEAT(Actor Vehicle, int SeatId, bool Enable) { return Invoke<0x6AC8234D, bool>(Vehicle, SeatId, Enable); }
 	static int DECOR_SET_STRING(int pram0, int pram1, int pram2) { return Invoke<0x53D3FB4A, int>(pram0, pram1, pram2); }
-	static int CREATE_WEAPON_PICKUP(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6) { return Invoke<0xBF0235B0, int>(pram0, pram1, pram2, pram3, pram4, pram5, pram6); }
+	static Pickup CREATE_WEAPON_PICKUP(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6) { return Invoke<0xBF0235B0, int>(pram0, pram1, pram2, pram3, pram4, pram5, pram6); }
 	static void SET_DRAW_OBJECT(int pram0, int pram1) { Invoke<0xC5A886DC, void>(pram0, pram1); }
 	static int UNK_0xDAB0D820(int pram0) { return Invoke<0xDAB0D820, int>(pram0); }
 	static int UNK_0x3ACE659E(int pram0) { return Invoke<0x3ACE659E, int>(pram0); }
@@ -1691,7 +1675,7 @@ namespace Rage
 	static int UNK_0xAB2D8A68(int pram0, int pram1, int pram2) { return Invoke<0xAB2D8A68, int>(pram0, pram1, pram2); }
 	static void UNK_0x3E8E7D7B(int pram0) { Invoke<0x3E8E7D7B, void>(pram0); }
 	static int UNK_0x0B071844(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6) { return Invoke<0x0B071844, int>(pram0, pram1, pram2, pram3, pram4, pram5, pram6); }
-	static Actor _CHANGE_ACTOR_MODEL_IN_LAYOUT(Layout Layout, Actor _Actor, const char* ActorInLayout, eActor ActorID, Vector3 Position, Vector3 Rotation, int unk0) { return Invoke<0x637E446B, Actor>(Layout, _Actor, ActorInLayout, ActorID, Position, Rotation, unk0); }
+	static Actor _CHANGE_ACTOR_MODEL_IN_LAYOUT(Layout _Layout, Actor _Actor, const char* _ActorInLayout, ActorModel _ActorModel, Vector3 _Position, Vector3 _Rotation, int _Unk0) { return Invoke<0x637E446B, Actor>(_Layout, _Actor, _ActorInLayout, _ActorModel, _Position, _Rotation, _Unk0); }
 	static void UNK_0x6F6D942B(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6) { Invoke<0x6F6D942B, void>(pram0, pram1, pram2, pram3, pram4, pram5, pram6); }
 	static void SET_AMBIENT_VOICE_NAME(int pram0, int pram1) { Invoke<0xBD2EA1A1, void>(pram0, pram1); }
 	static void UNK_0xF2F77F44(int pram0, int pram1) { Invoke<0xF2F77F44, void>(pram0, pram1); }
