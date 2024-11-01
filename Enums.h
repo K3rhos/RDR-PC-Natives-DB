@@ -2,146 +2,114 @@
 
 
 
-typedef enum eKey
+enum KeyCode
 {
-    KEY_ESC = 1,
-    KEY_1 = 2,
-    KEY_2 = 3,
-    KEY_3 = 4,
-    KEY_4 = 5,
-    KEY_5 = 6,
-    KEY_6 = 7,
-    KEY_7 = 8,
-    KEY_8 = 9,
-    KEY_9 = 10,
-    KEY_0 = 11,
-    KEY_MINUS = 12,
-    KEY_EQUAL = 13,
-    KEY_BACKSPACE = 14,
-    KEY_TAB = 15,
-    KEY_Q = 16,
-    KEY_W = 17,
-    KEY_E = 18,
-    KEY_R = 19,
-    KEY_T = 20,
-    KEY_Y = 21,
-    KEY_U = 22,
-    KEY_I = 23,
-    KEY_O = 24,
-    KEY_P = 25,
-    KEY_SQUARE_BRACKET_LEFT = 26,
-    KEY_SQUARE_BRACKET_RIGHT = 27,
-    KEY_ENTER = 28,
-    KEY_LEFT_CTRL = 29,
-    KEY_A = 30,
-    KEY_S = 31,
-    KEY_D = 32,
-    KEY_F = 33,
-    KEY_G = 34,
-    KEY_H = 35,
-    KEY_J = 36,
-    KEY_K = 37,
-    KEY_L = 38,
-    KEY_SEMI_COLON = 39,
-    KEY_APOSTROPHE = 40,
-    KEY_GRAVE = 41,
-    KEY_LEFT_SHIFT = 42,
-    KEY_BACKSLASH = 43,
-    KEY_Z = 44,
-    KEY_X = 45,
-    KEY_C = 46,
-    KEY_V = 47,
-    KEY_B = 48,
-    KEY_N = 49,
-    KEY_M = 50,
-    KEY_COMMA = 51,
-    KEY_PERIOD = 52,
-    KEY_FORWARDSLASH = 53,
-    KEY_RIGHT_SHIFT = 54,
-    KEY_ASTERISK = 55,
-    KEY_LEFT_ALT = 56,
-    KEY_SPACE = 57,
-    KEY_CAPS_LOCK = 58,
-    KEY_F1 = 59,
-    KEY_F2 = 60,
-    KEY_F3 = 61,
-    KEY_F4 = 62,
-    KEY_F5 = 63,
-    KEY_F6 = 64,
-    KEY_F7 = 65,
-    KEY_F8 = 66,
-    KEY_F9 = 67,
-    KEY_F10 = 68,
-    KEY_NUMLOCK = 69,
-    KEY_SCROLL_LOCK = 70,
-    KEY_NUMPAD_7 = 71,
-    KEY_NUMPAD_8 = 72,
-    KEY_NUMPAD_9 = 73,
-    KEY_NUMPAD_MINUS = 74,
-    KEY_NUMPAD_4 = 75,
-    KEY_NUMPAD_5 = 76,
-    KEY_NUMPAD_6 = 77,
-    KEY_NUMPAD_PLUS = 78,
-    KEY_NUMPAD_1 = 79,
-    KEY_NUMPAD_2 = 80,
-    KEY_NUMPAD_3 = 81,
-    KEY_NUMPAD_0 = 82,
-    KEY_NUMPAD_PERIOD = 83,
+    KEY_NONE = -1,
+    KEY_ESCAPE = 0x1,
+    KEY_1 = 0x2,
+    KEY_2 = 0x3,
+    KEY_3 = 0x4,
+    KEY_4 = 0x5,
+    KEY_5 = 0x6,
+    KEY_6 = 0x7,
+    KEY_7 = 0x8,
+    KEY_8 = 0x9,
+    KEY_9 = 0xA,
+    KEY_0 = 0xB,
+    KEY_MINUS = 0xC,
+    KEY_EQUAL = 0xD,
+    KEY_BACKSPACE = 0xE,
+    KEY_TAB = 0xF,
+    KEY_Q = 0x10,
+    KEY_W = 0x11,
+    KEY_E = 0x12,
+    KEY_R = 0x13,
+    KEY_T = 0x14,
+    KEY_Y = 0x15,
+    KEY_U = 0x16,
+    KEY_I = 0x17,
+    KEY_O = 0x18,
+    KEY_P = 0x19,
+    KEY_LEFT_SQUARE_BRACKET = 0x1A,
+    KEY_RIGHT_SQUARE_BRACKET = 0x1B,
+    KEY_ENTER = 0x1C,
+    KEY_LEFT_CTRL = 0x1D,
+    KEY_A = 0x1E,
+    KEY_S = 0x1F,
+    KEY_D = 0x20,
+    KEY_F = 0x21,
+    KEY_G = 0x22,
+    KEY_H = 0x23,
+    KEY_J = 0x24,
+    KEY_K = 0x25,
+    KEY_L = 0x26,
+    KEY_SEMICOLON = 0x27,
+    KEY_APOSTROPHE = 0x28,
+    KEY_GRAVE = 0x29,
+    KEY_LEFT_SHIFT = 0x2A,
+    KEY_BACKSLASH = 0x2B,
+    KEY_Z = 0x2C,
+    KEY_X = 0x2D,
+    KEY_C = 0x2E,
+    KEY_V = 0x2F,
+    KEY_B = 0x30,
+    KEY_N = 0x31,
+    KEY_M = 0x32,
+    KEY_COMMA = 0x33,
+    KEY_PERIOD = 0x34,
+    KEY_FORWARD_SLASH = 0x35,
+    KEY_RIGHT_SHIFT = 0x36,
+    KEY_ASTERISK = 0x37,
+    KEY_LEFT_ALT = 0x38,
+    KEY_SPACE = 0x39,
+    KEY_CAPS_LOCK = 0x3A,
+    KEY_F1 = 0x3B,
+    KEY_F2 = 0x3C,
+    KEY_F3 = 0x3D,
+    KEY_F4 = 0x3E,
+    KEY_F5 = 0x3F,
+    KEY_F6 = 0x40,
+    KEY_F7 = 0x41,
+    KEY_F8 = 0x42,
+    KEY_F9 = 0x43,
+    KEY_F10 = 0x44,
+    KEY_NUMLOCK = 0x45,
+    KEY_SCROLL_LOCK = 0x46,
+    KEY_NUMPAD_7 = 0x47,
+    KEY_NUMPAD_8 = 0x48,
+    KEY_NUMPAD_9 = 0x49,
+    KEY_NUMPAD_MINUS = 0x4A,
+    KEY_NUMPAD_4 = 0x4B,
+    KEY_NUMPAD_5 = 0x4C,
+    KEY_NUMPAD_6 = 0x4D,
+    KEY_NUMPAD_PLUS = 0x4E,
+    KEY_NUMPAD_1 = 0x4F,
+    KEY_NUMPAD_2 = 0x50,
+    KEY_NUMPAD_3 = 0x51,
+    KEY_NUMPAD_0 = 0x52,
+    KEY_NUMPAD_PERIOD = 0x53,
+    KEY_F11 = 0x57,
+    KEY_F12 = 0x58,
+    KEY_LEFT_WINDOWS = 0x5B,
+    KEY_RIGHT_WINDOWS = 0x5C,
+    KEY_MENU = 0x5D,
+    KEY_NUMPAD_ENTER = 0x9C,
+    KEY_RIGHT_CTRL = 0x9D,
+    KEY_NUMPAD_FORWARD_SLASH = 0xB5,
+    KEY_RIGHT_ALT = 0xB8,
+    KEY_HOME = 0xC7,
+    KEY_UP_ARROW = 0xC8,
+    KEY_PAGE_UP = 0xC9,
+    KEY_LEFT_ARROW = 0xCB,
+    KEY_RIGHT_ARROW = 0xCD,
+    KEY_END = 0xCF,
+    KEY_DOWN_ARROW = 0xD0,
+    KEY_PAGE_DOWN = 0xD1,
+    KEY_INSERT = 0xD2,
+    KEY_DELETE = 0xD3,
 
-    KEY_F11 = 87,
-    KEY_F12 = 88,
-    KEY_F13 = 100,//            (NEC PC98)
-    KEY_F14 = 101,//            (NEC PC98)
-    KEY_F15 = 102,//            (NEC PC98)
-
-    KEY_PAUSE = 119,//            Might Be Wrong Pause and Break acts as different keys
-
-    KEY_KANA = 112,//            (Japanese keyboard)
-    KEY_CONVERT = 121,//        (Japanese keyboard)
-    KEY_NOCONVERT = 123,//        (Japanese keyboard)
-    KEY_YEN = 125,//            (Japanese keyboard)
-    KEY_NUMPAD_EQUAL = 141,//    (NEC PC98) = on numeric keypad
-    KEY_CIRCUMFLEX = 144,//        (Japanese keyboard)
-    KEY_AT = 145,//                (NEC PC98)
-    KEY_COLON = 146,//            (NEC PC98)
-    KEY_UNDERLINE = 147,//        (NEC PC98)
-    KEY_KANJI = 148,//            (Japanese keyboard)
-    KEY_STOP = 149,//            (NEC PC98)
-    KEY_AX = 150,//                (Japan AX)
-    KEY_UNLABELED = 151,//        (J3100)
-    KEY_NUMPAD_ENTER = 156,
-    KEY_RIGHT_CRTL = 157,
-    KEY_NUMPAD_COMMA = 179,//    (NEC PC98) , on numeric keypad
-    KEY_NUMPAD_FORWARDSLASH = 181,
-    KEY_SYSRQ = 183,
-    KEY_RIGHT_ALT = 184,
-    KEY_HOME = 199,
-    KEY_ARROW_UP = 200,
-    KEY_PAGEUP = 201,
-    KEY_ARROW_LEFT = 203,
-    KEY_ARROW_RIGHT = 205,
-    KEY_END = 207,
-    KEY_ARROW_DOWN = 208,
-    KEY_PAGEDOWN = 209,
-    KEY_INSERT = 210,
-    KEY_DELETE = 211,
-    KEY_LEFT_WINDOWS = 219,//    Left Windows key
-    KEY_RIGHT_WINDOWS = 220,//    Right Windows key
-    KEY_APPMENU = 221,//        AppMenu key
-
-    //Other Key Definitions
-    KEY_NUMPAD_HOME = 71,
-    KEY_NUMPAD_UP = 72,
-    KEY_NUMPAD_PAGEUP = 73,
-    KEY_NUMPAD_LEFT = 75,
-    KEY_NUMPAD_RIGHT = 77,
-    KEY_NUMPAD_END = 79,
-    KEY_NUMPAD_DOWN = 80,
-    KEY_NUMPAD_PAGEDOWN = 81,
-    KEY_NUMPAD_INSERT = 82,
-    KEY_NUMPAD_DELETE = 83,
-    KEY_PRTSC = 183,
-} eKey;
+    INPUT_NUM_KEYS = 0xD4
+};
 
 
 
@@ -167,9 +135,10 @@ enum Button : int
 
 
 
-typedef enum eActor
+enum ActorModel
 {
-#pragma region BaseGame//{
+    #pragma region BaseGame//{
+
     ACTOR_PLAYER,
     ACTOR_PLAYER_JACK,
     ACTOR_PLAYER_cs,
@@ -1374,8 +1343,11 @@ typedef enum eActor
     ACTOR_VEHICLE_Chuckwagon02,
     ACTOR_VEHICLE_Coach01,
     ACTOR_VEHICLE_TRAIN_MineCart01,
-#pragma endregion//}
-#pragma region Undead Nightmare//{
+
+    #pragma endregion//}
+
+    #pragma region Undead Nightmare//{
+
     ACTOR_UN_PLAYER = 0,
     ACTOR_UN_PLAYER_cs = 2,
     ACTOR_UN_ASIAN_FEMALE_Prostitute01 = 3,
@@ -1785,12 +1757,13 @@ typedef enum eActor
     ACTOR_UN_RCM_Z_Mackenna = 1284,
     ACTOR_UN_MISC_Wife_SmallClothesHealed = 1285,
     ACTOR_UN_MISC_Son_SmallClothesHealed = 1286
-#pragma endregion//}
-} eActor;
+
+    #pragma endregion//}
+};
 
 
 
-enum Weapon : int
+enum WeaponModel : int
 {
     WEAPON_PISTOL_Volcanic,
     WEAPON_PISTOL_SemiAuto,
