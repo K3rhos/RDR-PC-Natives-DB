@@ -43,7 +43,6 @@ namespace Rage
 	static void UI_ENABLE(const char* _UILayer) { Invoke<0xE576DCAD, void>(_UILayer); }
 	static void UI_INCLUDE(const char* _UILayer) { Invoke<0x209255AD, void>(_UILayer); }
 	static int UNK_0x3B004817() { return Invoke<0x3B004817, int>(); }
-	static void SET_RICH_PRESENCE(int pram0, int pram1, int pram2, int pram3, int pram4) { Invoke<0x7BDCBD45, void>(pram0, pram1, pram2, pram3, pram4); }
 	static bool UNK_0x7CE2C2E1() { return Invoke<0x7CE2C2E1, bool>(); }
 	static void UNK_0x49E4EB10(int pram0) { Invoke<0x49E4EB10, void>(pram0); }
 	static void TOGGLE_COVER_PROPS(int pram0) { Invoke<0x288E4BFB, void>(pram0); }
@@ -102,8 +101,6 @@ namespace Rage
 	static int UNK_0xB8E09389(int pram0) { return Invoke<0xB8E09389, int>(pram0); }
 	static int UNK_0x0E453CF0(int pram0, int pram1, int pram2, int pram3) { return Invoke<0x0E453CF0, int>(pram0, pram1, pram2, pram3); }
 	static void SET_TIME_OF_DAY(Time UnixTime) { Invoke<0xAD03186C, void>(UnixTime); }
-	static int NET_IS_SESSION_HOST() { return Invoke<0xCDAC0F0E, int>(); }
-	static int NET_IS_IN_SESSION() { return Invoke<0x8CA54980, int>(); }
 	static int UNK_0x5D934CCB(int pram0, int pram1) { return Invoke<0x5D934CCB, int>(pram0, pram1); }
 	static float RAND_FLOAT_RANGE(float _Min, float _Max) { return Invoke<0xCA6229BF, float>(_Min, _Max); }
 	static void UNK_0xB35C0660(int pram0) { Invoke<0xB35C0660, void>(pram0); }
@@ -122,9 +119,8 @@ namespace Rage
 	static void UNK_0x7D5C0C4D() { Invoke<0x7D5C0C4D, void>(); }
 	static void UNK_0x7E4A92CF(int pram0, int pram1) { Invoke<0x7E4A92CF, void>(pram0, pram1); }
 	static void UI_SET_MONEY(int pram0, int pram1, int pram2) { Invoke<0xF71BD93A, void>(pram0, pram1, pram2); }
-	static const char* UNK_0x47EF426D(const char* pram0) { return Invoke<0x62B6A762, const char*>(pram0); }
-	static int NET_GET_PLAYMODE() { return Invoke<0xBC4B6B74, int>(); }
-	static const char* UI_GET_STRING(const char* GXTEntry) { return Invoke<0x196C8BD7, const char*>(GXTEntry); }
+	static const char* UNK_0x47EF426D(const char* pram0) { return Invoke<0x47EF426D, const char*>(pram0); }
+	static const char* UI_GET_STRING(const char* _GXTEntry) { return Invoke<0xCCCFF80B, const char*>(_GXTEntry); }
 	static void SAVE_SOFT_SAVE(int pram0) { Invoke<0x1A3BAC68, void>(pram0); }
 	static int UNK_0x82F63365(int pram0) { return Invoke<0x82F63365, int>(pram0); }
 	static void SET_PLAYER_CONTROL_RUMBLE(int pram0, int pram1) { Invoke<0x4590CE00, void>(pram0, pram1); }
@@ -163,7 +159,7 @@ namespace Rage
 	static int ROUND(int pram0) { return Invoke<0x323B0E24, int>(pram0); }
 	static int UNK_0xFA6BDD8E(int pram0, int pram1, int pram2) { return Invoke<0xFA6BDD8E, int>(pram0, pram1, pram2); }
 	static const char* _FLOAT_TO_STRING(float Flt, int unk3, int Precision) { return Invoke<0x8ED1FF95, const char*>(Flt, unk3, Precision); }
-	static const char* INT_TO_STRING(int i) { return Invoke<0x270307B4, const char*>(i); }
+	static const char* INT_TO_STRING(int i) { return Invoke<0xA883AFCC, const char*>(i); }
 	static void CLEAR_STAT_MESSAGE() { Invoke<0x906E0138, void>(); }
 	static Hash STRING_TO_HASH(const char* _Str) { return Invoke<0x84415E28, Hash>(_Str); }
 	static void SET_STAT_MESSAGE(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6, int pram7, int pram8, int pram9, int pram10, int pram11, int pram12) { Invoke<0x73DA6AF1, void>(pram0, pram1, pram2, pram3, pram4, pram5, pram6, pram7, pram8, pram9, pram10, pram11, pram12); }
@@ -179,7 +175,7 @@ namespace Rage
 	static int AWARD_AVATAR(int pram0) { return Invoke<0xDD33E221, int>(pram0); }
 	static int DECOR_CHECK_EXIST(int pram0, int pram1) { return Invoke<0xA0773F5C, int>(pram0, pram1); }
 	static bool IS_DEV_BUILD() { return Invoke<0x6D9AA768, bool>(); }
-	static const char* SS_GET_STRING(int pram0, int pram1) { return Invoke<0x9594C4E4, const char*>(pram0, pram1); }
+	static const char* SS_GET_STRING(int pram0, int pram1) { return Invoke<0x20D34AC5, const char*>(pram0, pram1); }
 	static int SAVE_GAME(int pram0) { return Invoke<0x09C5D8D5, int>(pram0); }
 	static void UNK_0x17F34613(int pram0) { Invoke<0x17F34613, void>(pram0); }
 	static void UNK_0xED40F27D(int pram0) { Invoke<0xED40F27D, void>(pram0); }
@@ -217,8 +213,8 @@ namespace Rage
 	static int GET_ITEM_COUNT(int pram0, int pram1) { return Invoke<0xD91ED898, int>(pram0, pram1); }
 	static void PRINT_OBJECTIVE_FORMAT(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6, int pram7, int pram8, int pram9, int pram10) { Invoke<0x283B4EFC, void>(pram0, pram1, pram2, pram3, pram4, pram5, pram6, pram7, pram8, pram9, pram10); }
 	static int DECOR_SET_INT(int pram0, int pram1, int pram2) { return Invoke<0xDB718B21, int>(pram0, pram1, pram2); }
-	static bool IS_OBJECT_VALID(Object Object) { return Invoke<0xD7E7187B, bool>(Object); }
-	static int GET_OBJECT_POSITION(int pram0, int pram1) { return Invoke<0x31201B4C, int>(pram0, pram1); }
+	static bool IS_OBJECT_VALID(Object _Object) { return Invoke<0xD7E7187B, bool>(_Object); }
+	static Vector3 GET_OBJECT_POSITION(Object _Object) { Vector3 position; Invoke<0x31201B4C, bool>(_Object, &position); return position; }
 	static int GET_OBJECT_TYPE(int pram0) { return Invoke<0x261ECB20, int>(pram0); }
 	static void GET_VOLUME_SCALE(int pram0, int pram1) { Invoke<0xE9C34ACC, void>(pram0, pram1); }
 	static int ADD_BLIP_FOR_COORD(int pram0, int pram1, int pram2, int pram3, int pram4) { return Invoke<0xC6F43D0E, int>(pram0, pram1, pram2, pram3, pram4); }
@@ -323,8 +319,8 @@ namespace Rage
 	static int UNK_0x8C710D3E(int pram0) { return Invoke<0x8C710D3E, int>(pram0); }
 	static void NET_LOG(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6) { Invoke<0x48275716, void>(pram0, pram1, pram2, pram3, pram4, pram5, pram6); }
 	static Camera GET_GAME_CAMERA() { return Invoke<0x6B7677BF, Camera>(); }
-	static void GET_CAMERA_DIRECTION(Camera Cam, Vector3* OutDirection) { Invoke<0xBBD1078A, void>(Cam, OutDirection); }
-	static void GET_CAMERA_POSITION(Camera Cam, Vector3* OutPosition) { Invoke<0x4A65F0B7, void>(Cam, OutPosition); }
+	static Vector3 GET_CAMERA_DIRECTION(Camera _Camera) { Vector3 direction; Invoke<0xBBD1078A, void>(_Camera, &direction); return direction; }
+	static Vector3 GET_CAMERA_POSITION(Camera _Camera) { Vector3 position; Invoke<0x4A65F0B7, void>(_Camera, &position); return position; }
 	static void VSCALE(Vector3* Vector, float Scale) { Invoke<0x13530581, void>(Vector, Scale); }
 	static int GET_ACTORENUM_FROM_STRING(const char* ActorName) { return Invoke<0x8B217CAC, int>(ActorName); }
 	static void STREAMING_REQUEST_ACTOR(int pram0, int pram1, int pram2) { Invoke<0xB0A79FEE, void>(pram0, pram1, pram2); }
@@ -335,7 +331,7 @@ namespace Rage
 	static Actor CREATE_ACTOR_IN_LAYOUT(Layout _Layout, const char* _ActorName, ActorModel _ActorModel, Vector3 _Position, Vector3 _Rotation) { return Invoke<0x8D67F397, Actor>(_Layout, _ActorName, _ActorModel, _Position, _Rotation); }
 	static void TASK_STAND_STILL(int pram0, int pram1, int pram2, int pram3) { Invoke<0x6F80965D, void>(pram0, pram1, pram2, pram3); }
 	static int STRING_LOWER(int pram0) { return Invoke<0x3E785560, int>(pram0); }
-	static void KILL_ACTOR(int pram0) { Invoke<0x8B08ECA2, void>(pram0); }
+	static void KILL_ACTOR(Actor _Actor) { Invoke<0x8B08ECA2, void>(_Actor); }
 	static void PRINT_FRAME_TIME(int pram0) { Invoke<0xB84DE79E, void>(pram0); }
 	static int GET_ACTOR_AXIS(int pram0, int pram1, int pram2) { return Invoke<0x294A5549, int>(pram0, pram1, pram2); }
 	static void SCRIPT_BREAKPOINT(int pram0) { Invoke<0xA81DABA3, void>(pram0); }
@@ -362,8 +358,8 @@ namespace Rage
 	static int UNK_0x2803BDA8(int pram0) { return Invoke<0x2803BDA8, int>(pram0); }
 	static void UNK_0x1BD78730(int pram0, int pram1, int pram2) { Invoke<0x1BD78730, void>(pram0, pram1, pram2); }
 	static int UNK_0xF437B3D9(int pram0, int pram1, int pram2, int pram3) { return Invoke<0xF437B3D9, int>(pram0, pram1, pram2, pram3); }
-	static int GET_OBJECT_RELATIVE_POSITION(int pram0, int pram1, int pram2, int pram3, int pram4) { return Invoke<0x2243EA59, int>(pram0, pram1, pram2, pram3, pram4); }
-	static int GET_OBJECT_RELATIVE_ORIENTATION(int pram0, int pram1, int pram2, int pram3, int pram4) { return Invoke<0x919583DC, int>(pram0, pram1, pram2, pram3, pram4); }
+	static bool GET_OBJECT_RELATIVE_POSITION(Object _Object, Vector3* _Input, int _Unused, Vector3* _Output) { return Invoke<0x2243EA59, bool>(_Object, _Input, _Unused, _Output); }
+	static bool GET_OBJECT_RELATIVE_ORIENTATION(int pram0, int pram1, int pram2, int pram3, int pram4) { return Invoke<0x919583DC, bool>(pram0, pram1, pram2, pram3, pram4); }
 	static int UNK_0xC07681C1(int pram0, int pram1, int pram2, int pram3) { return Invoke<0xC07681C1, int>(pram0, pram1, pram2, pram3); }
 	static int GET_ASSET_ID(const char* _AssetPath, AssetType _AssetType) { return Invoke<0x6005B514, int>(_AssetPath, _AssetType); }
 	static void STREAMING_REQUEST_PROPSET(int pram0) { Invoke<0xEC1F14C8, void>(pram0); }
@@ -565,9 +561,9 @@ namespace Rage
 	static void DISABLE_WORLD_SECTOR(int pram0) { Invoke<0xB511D087, void>(pram0); }
 	static void ENABLE_WORLD_SECTOR(int pram0) { Invoke<0xAD5613FD, void>(pram0); }
 	static int ENABLE_CURVE(int pram0, int pram1) { return Invoke<0x0C46DAB3, int>(pram0, pram1); }
-	static const char* UNK_0xC7612A79(const char* pram0, const char* pram1) { return Invoke<0x2DD3948E, const char*>(pram0, pram1); }
+	static const char* UNK_0xC7612A79(const char* pram0, const char* pram1) { return Invoke<0xC7612A79, const char*>(pram0, pram1); }
 	static void UNK_0xD44F7102(int pram0, int pram1, int pram2) { Invoke<0xD44F7102, void>(pram0, pram1, pram2); }
-	static const char* VECTOR_TO_STRING(Vector3* Vec) { return Invoke<0x8A16E9F5, const char*>(Vec); }
+	static const char* VECTOR_TO_STRING(Vector3* Vec) { return Invoke<0x6B8E4CDD, const char*>(Vec); }
 	static void AUDIO_MUSIC_SET_STATE(int pram0) { Invoke<0x789C753C, void>(pram0); }
 	static int UNK_0x38771B89(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6, int pram7, int pram8, int pram9, int pram10) { return Invoke<0x38771B89, int>(pram0, pram1, pram2, pram3, pram4, pram5, pram6, pram7, pram8, pram9, pram10); }
 	static int UNK_0xC426D16F(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6, int pram7, int pram8, int pram9, int pram10, int pram11) { return Invoke<0xC426D16F, int>(pram0, pram1, pram2, pram3, pram4, pram5, pram6, pram7, pram8, pram9, pram10, pram11); }
@@ -668,7 +664,7 @@ namespace Rage
 	static int UNK_0xD92BA5B6(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6, int pram7, int pram8, int pram9) { return Invoke<0xD92BA5B6, int>(pram0, pram1, pram2, pram3, pram4, pram5, pram6, pram7, pram8, pram9); }
 	static int UNK_0xFF8CBD07(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6, int pram7) { return Invoke<0xFF8CBD07, int>(pram0, pram1, pram2, pram3, pram4, pram5, pram6, pram7); }
 	static int GET_LOCATOR_OFFSETS(int pram0, int pram1, int pram2, int pram3) { return Invoke<0x0BA5E579, int>(pram0, pram1, pram2, pram3); }
-	static int SET_OBJECT_POSITION(Object Obj, Vector3 Position) { return Invoke<0xC5D796F8, int>(Obj, Position); }
+	static bool SET_OBJECT_POSITION(Object _Object, Vector3* _Position) { return Invoke<0xC5D796F8, bool>(_Object, _Position); }
 	static void UNK_0x47C5E353(int pram0, int pram1) { Invoke<0x47C5E353, void>(pram0, pram1); }
 	static void UNK_0x3932B786(int pram0) { Invoke<0x3932B786, void>(pram0); }
 	static int UNK_0xF7277A0F(int pram0, int pram1) { return Invoke<0xF7277A0F, int>(pram0, pram1); }
@@ -695,7 +691,7 @@ namespace Rage
 	static int GET_DRAFT_ACTOR(int pram0, int pram1) { return Invoke<0x48D5121D, int>(pram0, pram1); }
 	static bool IS_ACTOR_DEAD(Actor actor) { return Invoke<0x0D798FFE, bool>(actor); }
 	static int IS_OBJECT_IN_OBJECTSET(int pram0, int pram1) { return Invoke<0x0114FCBD, int>(pram0, pram1); }
-	static const char* GET_ACTOR_NAME(Actor actor) { return Invoke<0x19B71CAC, const char*>(actor); }
+	static const char* GET_ACTOR_NAME(Actor _Actor) { return Invoke<0x78CF43C1, const char*>(_Actor); }
 	static int UNK_0x1449EE9E(int pram0) { return Invoke<0x1449EE9E, int>(pram0); }
 	static void AI_SET_NAV_MATERIAL_USAGE(int pram0, int pram1, int pram2) { Invoke<0x7B00615F, void>(pram0, pram1, pram2); }
 	static void SET_ACTOR_EXEMPT_FROM_AMBIENT_RESTRICTIONS(int pram0, int pram1) { Invoke<0x4D0A87BF, void>(pram0, pram1); }
@@ -1078,7 +1074,7 @@ namespace Rage
 	static void UNK_0xEB7B0FAA(int pram0, int pram1) { Invoke<0xEB7B0FAA, void>(pram0, pram1); }
 	static void PRINT_BIG_FORMAT(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6, int pram7) { Invoke<0xBCB8D17F, void>(pram0, pram1, pram2, pram3, pram4, pram5, pram6, pram7); }
 	static int UNK_0xCE210220(int pram0, int pram1, int pram2) { return Invoke<0xCE210220, int>(pram0, pram1, pram2); }
-	static int GET_OBJECT_HEADING(int pram0) { return Invoke<0x1C02D2F8, int>(pram0); }
+	static float GET_OBJECT_HEADING(Object _Object) { return Invoke<0x1C02D2F8, float>(_Object); }
 	static int IS_ACTION_NODE_PLAYING(int pram0, int pram1) { return Invoke<0x7B19DEC6, int>(pram0, pram1); }
 	static int ATTACH_SLOT_FROM_STRING(int pram0) { return Invoke<0x4A61BD63, int>(pram0); }
 	static int ATTACH_PROP_TO_ANIM(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5) { return Invoke<0x0436C0BF, int>(pram0, pram1, pram2, pram3, pram4, pram5); }
@@ -1181,7 +1177,6 @@ namespace Rage
 	static void AI_PREDICATE_OVERRIDE_SET_BOOL(int pram0, int pram1, int pram2) { Invoke<0x1117C85A, void>(pram0, pram1, pram2); }
 	static void SQUAD_SET_NOT_ELIMINATED_IMPAIRMENT_MASK(int pram0, int pram1) { Invoke<0xE7D45FB3, void>(pram0, pram1); }
 	static void SQUAD_SET_FACTION(int pram0, int pram1) { Invoke<0xAEA4E9AE, void>(pram0, pram1); }
-	static int NET_IS_OBJECT_LOCAL(int pram0) { return Invoke<0xD12C55A5, int>(pram0); }
 	static int UNK_0x2B8C3258(int pram0) { return Invoke<0x2B8C3258, int>(pram0); }
 	static int GET_LOCAL_SLOT() { return Invoke<0xAD68A22E, int>(); }
 	static int UNK_0xA2866F3B(int pram0) { return Invoke<0xA2866F3B, int>(pram0); }
@@ -1206,7 +1201,7 @@ namespace Rage
 	static void SET_PERS_CHAR_ENABLED(int pram0, int pram1) { Invoke<0xC85CFEA9, void>(pram0, pram1); }
 	static void SET_DAY(int pram0) { Invoke<0x0EBBDC34, void>(pram0); }
 	static void TELEPORT_ACTOR_WITH_HEADING(Actor _Actor, Vector3* _Position, float _Heading, bool _UnkFlag0, bool _UnkFlag1, bool _UnkFlag2) { Invoke<0xE4DE507C, void>(_Actor, _Position, _Heading, _UnkFlag0, _UnkFlag1, _UnkFlag2); }
-	static int SET_OBJECT_ORIENTATION(int pram0, int pram1, int pram2, int pram3) { return Invoke<0xC8A4EE74, int>(pram0, pram1, pram2, pram3); }
+	static bool SET_OBJECT_ORIENTATION(Object _Object, Vector3* _Orientation) { return Invoke<0xC8A4EE74, bool>(_Object, _Orientation); }
 	static void OPEN_DOOR_FAST(int pram0, int pram1) { Invoke<0xCF89BC95, void>(pram0, pram1); }
 	static int UNK_0x76FBF412() { return Invoke<0x76FBF412, int>(); }
 	static void UNK_0x6ADAAD87(int pram0, int pram1, int pram2) { Invoke<0x6ADAAD87, void>(pram0, pram1, pram2); }
@@ -1578,7 +1573,7 @@ namespace Rage
 	static int UNK_0x941FC468(int pram0) { return Invoke<0x941FC468, int>(pram0); }
 	static void GET_GRINGO_ACTIVATION_SPHERE(int pram0, int pram1, int pram2) { Invoke<0xADA2EA30, void>(pram0, pram1, pram2); }
 	static bool UNK_0x8EB0B2AD() { return Invoke<0x8EB0B2AD, bool>(); }
-	static void SET_CAMERA_TARGET_OBJECT(int pram0, int pram1, int pram2) { Invoke<0xDBD1AE22, void>(pram0, pram1, pram2); }
+	static void SET_CAMERA_TARGET_OBJECT(Camera _Camera, Object _Object, int pram2) { Invoke<0xDBD1AE22, void>(_Camera, _Object, pram2); }
 	static int UNK_0xBFD6AE3D(int pram0) { return Invoke<0xBFD6AE3D, int>(pram0); }
 	static int GRINGO_QUERY_PROP(int pram0, int pram1) { return Invoke<0x2A7B1EFE, int>(pram0, pram1); }
 	static int ATTACH_OBJECTS_USING_LOCATOR(int pram0, int pram1, int pram2, int pram3, int pram4) { return Invoke<0xB6506558, int>(pram0, pram1, pram2, pram3, pram4); }
@@ -1640,8 +1635,6 @@ namespace Rage
 	static void SET_CAMERASHOT_TARGET_POSITION(int pram0, int pram1, int pram2, int pram3, int pram4) { Invoke<0x0D6EC5D5, void>(pram0, pram1, pram2, pram3, pram4); }
 	static void UI_RESTORE(char* uiLayer) { Invoke<0x7ADB2BE7, void>(uiLayer); }
 	static void UNK_0x444C3C32(int pram0, int pram1, int pram2) { Invoke<0x444C3C32, void>(pram0, pram1, pram2); }
-	static void UNREGISTER_HOST_BROADCAST_VARIABLES() { Invoke<0x2707F082, void>(); }
-	static void UNREGISTER_CLIENT_BROADCAST_VARIABLES() { Invoke<0x0130DB5D, void>(); }
 	static void UNK_0x4D0C8AA4(int pram0) { Invoke<0x4D0C8AA4, void>(pram0); }
 	static void NET_UPDATE_LEADERBOARD(int pram0, int pram1, int pram2, int pram3) { Invoke<0x12304873, void>(pram0, pram1, pram2, pram3); }
 	static void UNK_0x89277EA3() { Invoke<0x89277EA3, void>(); }
@@ -1654,7 +1647,6 @@ namespace Rage
 	static float GET_TIME_ACCELERATION() { return Invoke<0xC87F16A8, float>(); }
 	static int GET_NUM_PLAYERS() { return Invoke<0x0F99A8BC, int>(); }
 	static float _GET_FRAME_TIME_2() { return Invoke<0x49F96787, float>(); }
-	static int NET_GET_NET_TIME() { return Invoke<0xFF8DA25D, int>(); }
 	static void UNK_0xB5DDEF68(int pram0, int pram1) { Invoke<0xB5DDEF68, void>(pram0, pram1); }
 	static void UNK_0x7725001B(int pram0, int pram1, int pram2) { Invoke<0x7725001B, void>(pram0, pram1, pram2); }
 	static void UNK_0x437588E6(int pram0) { Invoke<0x437588E6, void>(pram0); }
@@ -1713,7 +1705,7 @@ namespace Rage
 	static void UNK_0x49053A94(int pram0, int pram1) { Invoke<0x49053A94, void>(pram0, pram1); }
 	static void UI_UNFOCUS(const char* uiLayer) { Invoke<0x0ACEA059, void>(uiLayer); }
 	static int UNK_0xBA89F5EA(int pram0) { return Invoke<0xBA89F5EA, int>(pram0); }
-	static const char* GET_SLOT_NAME(int _SlotId) { return Invoke<0x0C984130, const char*>(_SlotId); }
+	static const char* GET_SLOT_NAME(int _SlotId) { return Invoke<0x34CBABAE, const char*>(_SlotId); }
 	static bool UNK_0xC0FC4B57() { return Invoke<0xC0FC4B57, bool>(); }
 	static int NET_IS_HOST_OF_THIS_SCRIPT() { return Invoke<0x6D403720, int>(); }
 	static void UNK_0x2547029C(int pram0, int pram1) { Invoke<0x2547029C, void>(pram0, pram1); }
@@ -1744,8 +1736,6 @@ namespace Rage
 	static void UNK_0x3AE77125(int pram0, int pram1, int pram2, int pram3) { Invoke<0x3AE77125, void>(pram0, pram1, pram2, pram3); }
 	static void AI_SET_WEAPON_DESIRED_RANGE(int pram0, int pram1) { Invoke<0xDA005857, void>(pram0, pram1); }
 	static void UNK_0xA4E29C31(int pram0, int pram1) { Invoke<0xA4E29C31, void>(pram0, pram1); }
-	static void REGISTER_HOST_BROADCAST_VARIABLES(int pram0, int pram1) { Invoke<0xBEDD194D, void>(pram0, pram1); }
-	static void REGISTER_CLIENT_BROADCAST_VARIABLES(int pram0, int pram1) { Invoke<0xF1732769, void>(pram0, pram1); }
 	static int UNK_0x704DBAC9(int pram0) { return Invoke<0x704DBAC9, int>(pram0); }
 	static void DESTROY_OBJECT_GLOW(int pram0) { Invoke<0xFC261530, void>(pram0); }
 	static void UNK_0x77403213(int pram0, int pram1, int pram2) { Invoke<0x77403213, void>(pram0, pram1, pram2); }
@@ -1959,8 +1949,6 @@ namespace Rage
 	static int CUTSCENEOBJECT_GET_CURRENT_TRANSITION_TYPE(int pram0) { return Invoke<0x0A776763, int>(pram0); }
 	static int UNK_0x28DAED2A(int pram0) { return Invoke<0x28DAED2A, int>(pram0); }
 	static int UNK_0xD4DEBC08(int pram0) { return Invoke<0xD4DEBC08, int>(pram0); }
-	static void UNK_0x75DD203B(int pram0) { Invoke<0x75DD203B, void>(pram0); }
-	static void UNK_0xB829A92D(int pram0) { Invoke<0xB829A92D, void>(pram0); }
 	static void END_SCRIPTED_REQUEST(int pram0) { Invoke<0x1958F478, void>(pram0); }
 	static void UNK_0xE783219A(int pram0) { Invoke<0xE783219A, void>(pram0); }
 	static void UNK_0x6AF07F86(int pram0) { Invoke<0x6AF07F86, void>(pram0); }
@@ -2120,7 +2108,7 @@ namespace Rage
 	static void UNK_0x468DDDB3(int pram0, int pram1) { Invoke<0x468DDDB3, void>(pram0, pram1); }
 	static int UNK_0x5DE07F18(int pram0) { return Invoke<0x5DE07F18, int>(pram0); }
 	static int SET_CURRENT_MAP(int pram0) { return Invoke<0x014C7C29, int>(pram0); }
-	static int UNK_0xF62EE158() { return Invoke<0xF62EE158, int>(); }
+	static bool UNK_0xF62EE158() { return Invoke<0xF62EE158, bool>(); }
 	static void UNK_0x449D4A89(int pram0) { Invoke<0x449D4A89, void>(pram0); }
 	static int UNK_0xAEC955F8(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5) { return Invoke<0xAEC955F8, int>(pram0, pram1, pram2, pram3, pram4, pram5); }
 	static int UNK_0x28FCBDF2(int pram0) { return Invoke<0x28FCBDF2, int>(pram0); }
@@ -2129,7 +2117,7 @@ namespace Rage
 	static void UNK_0xDF4627D1(int pram0, int pram1) { Invoke<0xDF4627D1, void>(pram0, pram1); }
 	static void UNK_0xDC330FB9(int pram0) { Invoke<0xDC330FB9, void>(pram0); }
 	static int UNK_0x9AC89564(int pram0, int pram1, int pram2) { return Invoke<0x9AC89564, int>(pram0, pram1, pram2); }
-	static int UNK_0xA61FA36B() { return Invoke<0xA61FA36B, int>(); }
+	static bool UNK_0xA61FA36B() { return Invoke<0xA61FA36B, bool>(); }
 	static int UNK_0x1E81DB60(int pram0, int pram1, int pram2) { return Invoke<0x1E81DB60, int>(pram0, pram1, pram2); }
 	static void UNK_0x2F7CB0E3(int pram0, int pram1) { Invoke<0x2F7CB0E3, void>(pram0, pram1); }
 	static void UNK_0x955E5EEB(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6, int pram7) { Invoke<0x955E5EEB, void>(pram0, pram1, pram2, pram3, pram4, pram5, pram6, pram7); }
@@ -2152,28 +2140,28 @@ namespace Rage
 	static void SET_SLEEP_TOLERANCE(int pram0, int pram1) { Invoke<0x750ADBE5, void>(pram0, pram1); }
 	static int UNK_0xC039BBF1(int pram0, int pram1, int pram2) { return Invoke<0xC039BBF1, int>(pram0, pram1, pram2); }
 	static int UNK_0x51CF9A54(int pram0, int pram1, int pram2) { return Invoke<0x51CF9A54, int>(pram0, pram1, pram2); }
-	static int GET_OBJECT_RELATIVE_OFFSET(int pram0, int pram1, int pram2, int pram3, int pram4) { return Invoke<0x15CDF203, int>(pram0, pram1, pram2, pram3, pram4); }
+	static bool GET_OBJECT_RELATIVE_OFFSET(Object _Object, Vector3* _Input, int _Unused, Vector3* _Output) { return Invoke<0x15CDF203, bool>(_Object, _Input, _Unused, _Output); }
 	static void UNK_0xBE17EB88(int pram0) { Invoke<0xBE17EB88, void>(pram0); }
 	static void UNK_0xABC78721(int pram0) { Invoke<0xABC78721, void>(pram0); }
 	static int GRINGO_QUERY_STRUCT(int pram0, int pram1, int pram2, int pram3, int pram4) { return Invoke<0x1528F08B, int>(pram0, pram1, pram2, pram3, pram4); }
 	static int UNK_0xBBB2780E() { return Invoke<0xBBB2780E, int>(); }
-	static int UNK_0xF4015EFC() { return Invoke<0xF4015EFC, int>(); }
-	static int IS_GRINGO_ACTIVE() { return Invoke<0x86F2C24D, int>(); }
-	static int UNK_0xF550F8E7() { return Invoke<0xF550F8E7, int>(); }
+	static bool UNK_0xF4015EFC() { return Invoke<0xF4015EFC, bool>(); }
+	static bool IS_GRINGO_ACTIVE() { return Invoke<0x86F2C24D, bool>(); }
+	static bool UNK_0xF550F8E7() { return Invoke<0xF550F8E7, bool>(); }
 	static int UNK_0xCA589BAB() { return Invoke<0xCA589BAB, int>(); }
 	static int UNK_0x2F096285() { return Invoke<0x2F096285, int>(); }
 	static int UNK_0x54745DB0() { return Invoke<0x54745DB0, int>(); }
 	static int UNK_0xD62D413C(int pram0) { return Invoke<0xD62D413C, int>(pram0); }
 	static void GRINGO_ENABLE_PLAYER_CONTROL(int pram0, int pram1) { Invoke<0x0B853FD5, void>(pram0, pram1); }
-	static int UNK_0x926FD361() { return Invoke<0x926FD361, int>(); }
+	static bool UNK_0x926FD361() { return Invoke<0x926FD361, bool>(); }
 	static void GRINGO_SET_MESSAGE_RETURN(int pram0) { Invoke<0x37D0F3E9, void>(pram0); }
 	static void GRINGO_WAIT(int pram0) { Invoke<0x738FA66B, void>(pram0); }
 	static void GRINGO_STOP() { Invoke<0x59647303, void>(); }
 	static int GRINGO_HANDLES_MOVEMENT(int pram0) { return Invoke<0xEDF3BF37, int>(pram0); }
 	static int SET_GRINGO_BOOL_ATTR(int pram0, int pram1, int pram2) { return Invoke<0xCF6822D7, int>(pram0, pram1, pram2); }
-	static int GET_TARGET_OBJECT() { return Invoke<0x533AD3F2, int>(); }
+	static Object GET_TARGET_OBJECT() { return Invoke<0x533AD3F2, Object>(); }
 	static void UNK_0x9A756A72(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6) { Invoke<0x9A756A72, void>(pram0, pram1, pram2, pram3, pram4, pram5, pram6); }
-	static int UNK_0x0A0E660E() { return Invoke<0x0A0E660E, int>(); }
+	static bool UNK_0x0A0E660E() { return Invoke<0x0A0E660E, bool>(); }
 	static int GET_GRINGO_BOOL_ATTR(int pram0, int pram1, int pram2) { return Invoke<0xFACF08C7, int>(pram0, pram1, pram2); }
 	static void UNK_0x89DE8A75(int pram0, int pram1) { Invoke<0x89DE8A75, void>(pram0, pram1); }
 	static int GET_GRINGO_STRING_ATTR(int pram0, int pram1, int pram2) { return Invoke<0x6BA58AC7, int>(pram0, pram1, pram2); }
@@ -2233,7 +2221,7 @@ namespace Rage
 	static int SET_GRINGO_VECTOR_ATTR(int pram0, int pram1, int pram2) { return Invoke<0x5C6831F9, int>(pram0, pram1, pram2); }
 	static int SET_GRINGO_FLOAT_ATTR(int pram0, int pram1, int pram2) { return Invoke<0xBC3C401F, int>(pram0, pram1, pram2); }
 	static int GRINGO_ACTOR_MOVE_TO_AND_FACE(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6, int pram7, int pram8) { return Invoke<0x0AF4FCB9, int>(pram0, pram1, pram2, pram3, pram4, pram5, pram6, pram7, pram8); }
-	static int UNK_0xFF1FC1EF() { return Invoke<0xFF1FC1EF, int>(); }
+	static bool UNK_0xFF1FC1EF() { return Invoke<0xFF1FC1EF, bool>(); }
 	static int UNK_0x24BAABCA(int pram0) { return Invoke<0x24BAABCA, int>(pram0); }
 	static void RESET_REACT_NODE_FOR_ACTOR(int pram0) { Invoke<0x7B17C5C3, void>(pram0); }
 	static int UNK_0x5C11B011(int pram0, int pram1) { return Invoke<0x5C11B011, int>(pram0, pram1); }
@@ -2253,7 +2241,7 @@ namespace Rage
 	static int GET_ACTOR_GAIT_TYPE(int pram0) { return Invoke<0xAC232F6E, int>(pram0); }
 	static void UNK_0x8CAF5C5C(int pram0) { Invoke<0x8CAF5C5C, void>(pram0); }
 	static int UNK_0x65CA3037(int pram0) { return Invoke<0x65CA3037, int>(pram0); }
-	static int UNK_0x5388F37D() { return Invoke<0x5388F37D, int>(); }
+	static bool UNK_0x5388F37D() { return Invoke<0x5388F37D, bool>(); }
 	static int UNK_0x284DD17C(int pram0, int pram1) { return Invoke<0x284DD17C, int>(pram0, pram1); }
 	static int UNK_0x3FA5FC03(int pram0) { return Invoke<0x3FA5FC03, int>(pram0); }
 	static int UNK_0xD6EE9534(int pram0, int pram1, int pram2) { return Invoke<0xD6EE9534, int>(pram0, pram1, pram2); }
@@ -2272,7 +2260,7 @@ namespace Rage
 	static void UNK_0x1C462085(int pram0) { Invoke<0x1C462085, void>(pram0); }
 	static void UNK_0x58018D83(int pram0) { Invoke<0x58018D83, void>(pram0); }
 	static int IS_PLAYER_SIGNED_IN() { return Invoke<0xC3C0F1F2, int>(); }
-	static int UNK_0x1D177160() { return Invoke<0x1D177160, int>(); }
+	static bool UNK_0x1D177160() { return Invoke<0x1D177160, bool>(); }
 	static int UNK_0x1ADA1769() { return Invoke<0x1ADA1769, int>(); }
 	static void SET_CAMERASHOT_FROM_LENS(int pram0, int pram1) { Invoke<0x6F483443, void>(pram0, pram1); }
 	static void FORCE_CAMERASHOT_UPDATE(int pram0) { Invoke<0xF5CA55D4, void>(pram0); }
@@ -2338,8 +2326,8 @@ namespace Rage
 	static void UNK_0x07EC142B(int pram0) { Invoke<0x07EC142B, void>(pram0); }
 	static void UNK_0x7AB17813(int pram0, int pram1) { Invoke<0x7AB17813, void>(pram0, pram1); }
 	static int UNK_0xDE339CE1() { return Invoke<0xDE339CE1, int>(); }
-	static int UNK_0xA6CFA220() { return Invoke<0xA6CFA220, int>(); }
-	static int UNK_0xEDF1D0B4() { return Invoke<0xEDF1D0B4, int>(); }
+	static bool UNK_0xA6CFA220() { return Invoke<0xA6CFA220, bool>(); }
+	static bool UNK_0xEDF1D0B4() { return Invoke<0xEDF1D0B4, bool>(); }
 	static void UNK_0xC175F2B5(int pram0, int pram1) { Invoke<0xC175F2B5, void>(pram0, pram1); }
 	static int UNK_0x8287F8B3(int pram0, int pram1, int pram2) { return Invoke<0x8287F8B3, int>(pram0, pram1, pram2); }
 	static int UNK_0x3D014AB1(int pram0) { return Invoke<0x3D014AB1, int>(pram0); }
@@ -2376,8 +2364,8 @@ namespace Rage
 	static void AI_SET_NAV_PATHFINDING_ENABLED_WHEN_DRIVING(int pram0, int pram1) { Invoke<0x98966941, void>(pram0, pram1); }
 	static int UNK_0x8020C45E(int pram0, int pram1, int pram2) { return Invoke<0x8020C45E, int>(pram0, pram1, pram2); }
 	static void UNK_0xF0DDF83D(int pram0) { Invoke<0xF0DDF83D, void>(pram0); }
-	static int AUDIO_MUSIC_IS_PREPARED() { return Invoke<0xBF316157, int>(); }
-	static int AUDIO_MUSIC_PLAY_PREPARED() { return Invoke<0x7CC2738F, int>(); }
+	static bool AUDIO_MUSIC_IS_PREPARED() { return Invoke<0xBF316157, bool>(); }
+	static bool AUDIO_MUSIC_PLAY_PREPARED() { return Invoke<0x7CC2738F, bool>(); }
 	static void UNK_0xE613AE52(int pram0) { Invoke<0xE613AE52, void>(pram0); }
 	static void UNK_0xF55B50ED(int pram0) { Invoke<0xF55B50ED, void>(pram0); }
 	static void UNK_0x6336182D(int pram0) { Invoke<0x6336182D, void>(pram0); }
@@ -2421,7 +2409,7 @@ namespace Rage
 	static void SET_DEADEYE_BLINK(int pram0) { Invoke<0xA543B120, void>(pram0); }
 	static void UNK_0x134AAF17(int pram0, int pram1, int pram2, int pram3) { Invoke<0x134AAF17, void>(pram0, pram1, pram2, pram3); }
 	static void UNK_0x12558DBD(int pram0, int pram1, int pram2, int pram3) { Invoke<0x12558DBD, void>(pram0, pram1, pram2, pram3); }
-	static int UNK_0x88863344() { return Invoke<0x88863344, int>(); }
+	static bool UNK_0x88863344() { return Invoke<0x88863344, bool>(); }
 	static int UNK_0xD062CBF6(int pram0, int pram1) { return Invoke<0xD062CBF6, int>(pram0, pram1); }
 	static void DEACTIVATE_JOURNAL_ENTRY(int pram0, int pram1) { Invoke<0x196A1EDE, void>(pram0, pram1); }
 	static void SET_RCM_ACTOR_CALL_OVER_ENABLE(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6, int pram7, int pram8, int pram9) { Invoke<0x2C6A5FAC, void>(pram0, pram1, pram2, pram3, pram4, pram5, pram6, pram7, pram8, pram9); }
@@ -2446,7 +2434,7 @@ namespace Rage
 	static void TASK_GUARD_STAND(int pram0, int pram1, int pram2) { Invoke<0x99F65CC0, void>(pram0, pram1, pram2); }
 	static int UNK_0x22558E3F(int pram0) { return Invoke<0x22558E3F, int>(pram0); }
 	static int UNK_0x26884138() { return Invoke<0x26884138, int>(); }
-	static int UNK_0xE7371670() { return Invoke<0xE7371670, int>(); }
+	static bool UNK_0xE7371670() { return Invoke<0xE7371670, bool>(); }
 	static void SET_INFINITE_DEADEYE(int UNK0, bool Infinite) { Invoke<0x0C0BC04E, void>(UNK0, Infinite); }
 	static int HORSE_UNLOCK_FRESHNESS(int pram0) { return Invoke<0x6AFA044B, int>(pram0); }
 	static int HORSE_SET_CURR_FRESHNESS(int pram0, int pram1) { return Invoke<0xF3976D70, int>(pram0, pram1); }
@@ -2464,7 +2452,7 @@ namespace Rage
 	static int AI_WAS_PUSHED_OVER(int pram0, int pram1) { return Invoke<0x09493438, int>(pram0, pram1); }
 	static int UNK_0xEBC9C2FD(int pram0, int pram1) { return Invoke<0xEBC9C2FD, int>(pram0, pram1); }
 	static int AI_GLOBAL_IS_DANGER(int pram0, int pram1) { return Invoke<0x5EC098F2, int>(pram0, pram1); }
-	static int GET_RADAR_RADIUS() { return Invoke<0x6B33CBCC, int>(); }
+	static float GET_RADAR_RADIUS() { return Invoke<0x6B33CBCC, float>(); }
 	static void UNK_0xC6E36B1D(int pram0) { Invoke<0xC6E36B1D, void>(pram0); }
 	static void PLAY_SOUND(int pram0) { Invoke<0xB6E1917F, void>(pram0); }
 	static int _RETURN_NULL_0() { return Invoke<0x191658C0, int>(); }
@@ -2504,23 +2492,23 @@ namespace Rage
 	static void UNK_0x4A598723(int pram0, int pram1, int pram2) { Invoke<0x4A598723, void>(pram0, pram1, pram2); }
 	static void UNK_0x9272926C(int pram0, int pram1, int pram2) { Invoke<0x9272926C, void>(pram0, pram1, pram2); }
 	static void UI_CHALLENGE_MAKE_CURRENT(int pram0) { Invoke<0x04A3022E, void>(pram0); }
-	static int UNK_0xA3E1EF71() { return Invoke<0xA3E1EF71, int>(); }
-	static int UNK_0x34711B59() { return Invoke<0x34711B59, int>(); }
+	static bool UNK_0xA3E1EF71() { return Invoke<0xA3E1EF71, bool>(); }
+	static bool UNK_0x34711B59() { return Invoke<0x34711B59, bool>(); }
 	static int UNK_0x5725C84F() { return Invoke<0x5725C84F, int>(); }
 	static int UNK_0x5FD52711() { return Invoke<0x5FD52711, int>(); }
 	static int UNK_0x86BC0A55(int pram0, int pram1) { return Invoke<0x86BC0A55, int>(pram0, pram1); }
 	static void UNK_0xEB4A6D85() { Invoke<0xEB4A6D85, void>(); }
 	static int UNK_0xD0808C42() { return Invoke<0xD0808C42, int>(); }
-	static int UNK_0xE89C6E4F() { return Invoke<0xE89C6E4F, int>(); }
+	static bool UNK_0xE89C6E4F() { return Invoke<0xE89C6E4F, bool>(); }
 	static int UNK_0x49C2B05F(int pram0) { return Invoke<0x49C2B05F, int>(pram0); }
 	static int UNK_0x0791F35A() { return Invoke<0x0791F35A, int>(); }
-	static int UNK_0xC813DBEF() { return Invoke<0xC813DBEF, int>(); }
+	static bool UNK_0xC813DBEF() { return Invoke<0xC813DBEF, bool>(); }
 	static int UNK_0x70AF0351(int pram0) { return Invoke<0x70AF0351, int>(pram0); }
 	static int UNK_0xE6B4F505() { return Invoke<0xE6B4F505, int>(); }
-	static int UNK_0x097BB984() { return Invoke<0x097BB984, int>(); }
+	static bool UNK_0x097BB984() { return Invoke<0x097BB984, bool>(); }
 	static int UNK_0x3A8C77AD(int pram0) { return Invoke<0x3A8C77AD, int>(pram0); }
 	static int UNK_0xEA7ADF42() { return Invoke<0xEA7ADF42, int>(); }
-	static int UNK_0x293C3288() { return Invoke<0x293C3288, int>(); }
+	static bool UNK_0x293C3288() { return Invoke<0x293C3288, bool>(); }
 	static int UNK_0x984749B4(int pram0) { return Invoke<0x984749B4, int>(pram0); }
 	static int UNK_0xA7F231B0() { return Invoke<0xA7F231B0, int>(); }
 	static void UNK_0x970AC1F7(int pram0, int pram1) { Invoke<0x970AC1F7, void>(pram0, pram1); }
@@ -2529,11 +2517,11 @@ namespace Rage
 	static void UNK_0x23EB81F0(int pram0, int pram1) { Invoke<0x23EB81F0, void>(pram0, pram1); }
 	static void UPDATE_STAT(int pram0, int pram1, int pram2) { Invoke<0xC9212F76, void>(pram0, pram1, pram2); }
 	static void HIDE_STAT(int pram0, int pram1) { Invoke<0x1CF1FCC4, void>(pram0, pram1); }
-	static int UNK_0x5B404EDA() { return Invoke<0x5B404EDA, int>(); }
+	static bool UNK_0x5B404EDA() { return Invoke<0x5B404EDA, bool>(); }
 	static int UNK_0x6A307D5F(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6, int pram7, int pram8, int pram9) { return Invoke<0x6A307D5F, int>(pram0, pram1, pram2, pram3, pram4, pram5, pram6, pram7, pram8, pram9); }
 	static void UNK_0x7FF20D84(int pram0) { Invoke<0x7FF20D84, void>(pram0); }
 	static void UNK_0x364450B1(int pram0) { Invoke<0x364450B1, void>(pram0); }
-	static int CAN_PLAYER_DIE() { return Invoke<0x90F9555B, int>(); }
+	static bool CAN_PLAYER_DIE() { return Invoke<0x90F9555B, bool>(); }
 	static void UNK_0xCFE22435(int pram0) { Invoke<0xCFE22435, void>(pram0); }
 	static void RESET_RUMBLE() { Invoke<0xB3BE2F95, void>(); }
 	static void UNK_0x39B0CFE5() { Invoke<0x39B0CFE5, void>(); }
@@ -2571,7 +2559,7 @@ namespace Rage
 	static void UNK_0x49BC0219(int pram0) { Invoke<0x49BC0219, void>(pram0); }
 	static void UNK_0x6085F7AC(int pram0, int pram1) { Invoke<0x6085F7AC, void>(pram0, pram1); }
 	static void ADD_CAMERATRANSITION_EVENT_GAMECAMERARESETTILT(int pram0, int pram1, int pram2) { Invoke<0x3A8487A6, void>(pram0, pram1, pram2); }
-	static int UNK_0xE5645CB3() { return Invoke<0xE5645CB3, int>(); }
+	static bool UNK_0xE5645CB3() { return Invoke<0xE5645CB3, bool>(); }
 	static void UNK_0xC9FCD3EC(int pram0) { Invoke<0xC9FCD3EC, void>(pram0); }
 	static void UNK_0xEC906A7A(int pram0) { Invoke<0xEC906A7A, void>(pram0); }
 	static void UNK_0xFA43DCC5(int pram0) { Invoke<0xFA43DCC5, void>(pram0); }
@@ -2792,7 +2780,7 @@ namespace Rage
 	static int IS_ACTOR_INITED(int pram0) { return Invoke<0x24F4DAB2, int>(pram0); }
 	static void UNK_0xA870B28E(int pram0, int pram1) { Invoke<0xA870B28E, void>(pram0, pram1); }
 	static int UNK_0x9DDB29B1(int pram0) { return Invoke<0x9DDB29B1, int>(pram0); }
-	static int UNK_0x24A1B923() { return Invoke<0x24A1B923, int>(); }
+	static bool UNK_0x24A1B923() { return Invoke<0x24A1B923, bool>(); }
 	static int DECOR_REMOVE_ALL(int pram0) { return Invoke<0xFDB9E349, int>(pram0); }
 	static void UNK_0x713B1D7F(int pram0, int pram1) { Invoke<0x713B1D7F, void>(pram0, pram1); }
 	static int UNK_0x34F03EC7(int pram0, int pram1, int pram2) { return Invoke<0x34F03EC7, int>(pram0, pram1, pram2); }
@@ -2808,8 +2796,7 @@ namespace Rage
 	static int UNK_0x98A5CDC5(int pram0) { return Invoke<0x98A5CDC5, int>(pram0); }
 	static int UNK_0x8808546E() { return Invoke<0x8808546E, int>(); }
 	static int UNK_0x1A47001B() { return Invoke<0x1A47001B, int>(); }
-	static int UNK_0x0FF6B8F4() { return Invoke<0x0FF6B8F4, int>(); }
-	static int NET_SESSION_LEAVE_SESSION() { return Invoke<0x4AE5DBB2, int>(); }
+	static bool UNK_0x0FF6B8F4() { return Invoke<0x0FF6B8F4, bool>(); }
 	static void UNK_0xCE8F6304(int pram0) { Invoke<0xCE8F6304, void>(pram0); }
 	static void UNK_0x41921C98(int pram0) { Invoke<0x41921C98, void>(pram0); }
 	static void UNK_0xAB32D5D9(int pram0) { Invoke<0xAB32D5D9, void>(pram0); }
@@ -2827,7 +2814,6 @@ namespace Rage
 	static void UNK_0x746897AB(int pram0, int pram1, int pram2, int pram3) { Invoke<0x746897AB, void>(pram0, pram1, pram2, pram3); }
 	static int UNK_0x0B24362F(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6, int pram7, int pram8) { return Invoke<0x0B24362F, int>(pram0, pram1, pram2, pram3, pram4, pram5, pram6, pram7, pram8); }
 	static int GET_PLAYER_CONTROL_CONFIG(int pram0) { return Invoke<0x8421033D, int>(pram0); }
-	static void UNK_0x72B03551() { Invoke<0x72B03551, void>(); }
 	static void UNK_0xE5FE0A6A(int pram0) { Invoke<0xE5FE0A6A, void>(pram0); }
 	static void UNK_0x08D84437(int pram0) { Invoke<0x08D84437, void>(pram0); }
 	static void UNK_0xAFFBBE78(int pram0) { Invoke<0xAFFBBE78, void>(pram0); }
@@ -2841,22 +2827,14 @@ namespace Rage
 	static int UNK_0x52C10147(int pram0) { return Invoke<0x52C10147, int>(pram0); }
 	static void UNK_0x90008899(int pram0) { Invoke<0x90008899, void>(pram0); }
 	static int NET_GET_AREA_OVERLOAD_STATE_FOR_SLOT(int pram0) { return Invoke<0xCB42389E, int>(pram0); }
-	static int NET_IS_BUSY() { return Invoke<0x0678A865, int>(); }
 	static int UNK_0x63034F52(int pram0) { return Invoke<0x63034F52, int>(pram0); }
-	static int UNK_0x2037A74F(int pram0) { return Invoke<0x2037A74F, int>(pram0); }
-	static int UNK_0x89D8FC30() { return Invoke<0x89D8FC30, int>(); }
 	static int UNK_0xE9EAC45C(int pram0) { return Invoke<0xE9EAC45C, int>(pram0); }
 	static int UNK_0xBDF22FCA(int pram0) { return Invoke<0xBDF22FCA, int>(pram0); }
 	static int UNK_0xA174152C(int pram0) { return Invoke<0xA174152C, int>(pram0); }
 	static int UNK_0x0183A3F0(int pram0) { return Invoke<0x0183A3F0, int>(pram0); }
-	static int UNK_0xF6E40FF3(int pram0, int pram1, int pram2, int pram3, int pram4) { return Invoke<0xF6E40FF3, int>(pram0, pram1, pram2, pram3, pram4); }
-	static int NET_IS_FACTION_SAFE(int pram0) { return Invoke<0x80B20614, int>(pram0); }
 	static void UNK_0x9EA132A3(int pram0) { Invoke<0x9EA132A3, void>(pram0); }
 	static int GUI_MAKE_WINDOW(GUIWindow Parent, int pram1, const char* WindowName, const char* pram3) { return Invoke<0xA20246AB, int>(Parent, pram1, WindowName, pram3); }
-	static int UNK_0x9180FF1C(int pram0) { return Invoke<0x9180FF1C, int>(pram0); }
 	static void UNK_0x2F7B457B(int pram0, int pram1, int pram2, int pram3) { Invoke<0x2F7B457B, void>(pram0, pram1, pram2, pram3); }
-	static void UNK_0xC0849D70() { Invoke<0xC0849D70, void>(); }
-	static int UNK_0x8DF05A4F(int pram0) { return Invoke<0x8DF05A4F, int>(pram0); }
 	static void UNK_0x651F6299(int pram0) { Invoke<0x651F6299, void>(pram0); }
 	static int UNK_0x4A721118(int pram0) { return Invoke<0x4A721118, int>(pram0); }
 	static int UNK_0x4500B98A(int pram0) { return Invoke<0x4500B98A, int>(pram0); }
@@ -2865,22 +2843,14 @@ namespace Rage
 	static bool _IS_ACTOR_AMMO_INFINITE(Actor Actor, int pram1) { return Invoke<0xC666B987, bool>(Actor, pram1); }
 	static void READY_ITEM(const char* ItemName, Actor Actor) { Invoke<0x2B00A643, void>(ItemName, Actor); }
 	static int UNK_0x0B2D5E4B() { return Invoke<0x0B2D5E4B, int>(); }
-	static int UNK_0x2010ABE6() { return Invoke<0x2010ABE6, int>(); }
-	static int UNK_0xFA0E1F8B(int pram0) { return Invoke<0xFA0E1F8B, int>(pram0); }
 	static void UNK_0xCB0BCAE2(int pram0) { Invoke<0xCB0BCAE2, void>(pram0); }
 	static void DISABLE_PLAYER_GRINGO_USE(int pram0, int pram1) { Invoke<0x6FCF6BC8, void>(pram0, pram1); }
-	static int UNK_0x3A5C56E3(int pram0) { return Invoke<0x3A5C56E3, int>(pram0); }
-	static void UNK_0xCC7D0431(int pram0) { Invoke<0xCC7D0431, void>(pram0); }
 	static void UNK_0xF7B747CA() { Invoke<0xF7B747CA, void>(); }
 	static void UNK_0x1184EC7B(int pram0) { Invoke<0x1184EC7B, void>(pram0); }
-	static int UNK_0x81FD9851() { return Invoke<0x81FD9851, int>(); }
 	static void UNK_0x120E6123(int pram0) { Invoke<0x120E6123, void>(pram0); }
-	static int UNK_0x86FF3A9B() { return Invoke<0x86FF3A9B, int>(); }
-	static int UNK_0xDC88B308() { return Invoke<0xDC88B308, int>(); }
-	static int UNK_0xF5B7B208() { return Invoke<0xF5B7B208, int>(); }
+	static bool UNK_0xF5B7B208() { return Invoke<0xF5B7B208, bool>(); }
 	static int UNK_0xBD269877(int pram0, int pram1, int pram2, int pram3, int pram4) { return Invoke<0xBD269877, int>(pram0, pram1, pram2, pram3, pram4); }
 	static void UNK_0x43C5F320() { Invoke<0x43C5F320, void>(); }
-	static void UNK_0xAD85A378() { Invoke<0xAD85A378, void>(); }
 	static void SET_CAMERA_FOCUS_OBJECT(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5) { Invoke<0x48C3D85A, void>(pram0, pram1, pram2, pram3, pram4, pram5); }
 	static void UNK_0xEB214384(int pram0) { Invoke<0xEB214384, void>(pram0); }
 	static int GET_SLOT_FACING(int pram0, int pram1) { return Invoke<0x34A9866B, int>(pram0, pram1); }
@@ -2888,7 +2858,7 @@ namespace Rage
 	static void _UI_ENTER_EXCLUSIVE(char* scaleformLayer) { Invoke<0xB1A2028A, void>(scaleformLayer); }
 	static void BURN_ACTOR(int pram0, int pram1, int pram2) { Invoke<0xA257C16D, void>(pram0, pram1, pram2); }
 	static int GRINGO_STAY_ACTIVE(int pram0, int pram1) { return Invoke<0x9175FCFA, int>(pram0, pram1); }
-	static int UNK_0xD8218A5B() { return Invoke<0xD8218A5B, int>(); }
+	static int _PUSH_NEG_ONE_2() { return Invoke<0xD8218A5B, int>(); }
 	static int UNK_0x74EE96B8(int pram0) { return Invoke<0x74EE96B8, int>(pram0); }
 	static int UNK_0x2374C1E0() { return Invoke<0x2374C1E0, int>(); }
 	static void TRAIN_DESTROY_CAR(int pram0, int pram1) { Invoke<0x2040FB19, void>(pram0, pram1); }
@@ -2906,7 +2876,7 @@ namespace Rage
 	static int FIRE_GET_OWNER(int pram0) { return Invoke<0x15683736, int>(pram0); }
 	static void UNK_0x40C2576F(int pram0, int pram1) { Invoke<0x40C2576F, void>(pram0, pram1); }
 	static void UNK_0xDF3DF05A(int pram0) { Invoke<0xDF3DF05A, void>(pram0); }
-	static int AUDIO_IS_SCRIPTED_MUSIC_PLAYING() { return Invoke<0x86E995D1, int>(); }
+	static bool AUDIO_IS_SCRIPTED_MUSIC_PLAYING() { return Invoke<0x86E995D1, bool>(); }
 	static int GET_ACTOR_WEAPON_REACTION_ACTOR_TYPE(int pram0) { return Invoke<0x78B7976E, int>(pram0); }
 	static int UNK_0xD19EFFC1(int pram0, int pram1) { return Invoke<0xD19EFFC1, int>(pram0, pram1); }
 	static void HUD_STAMINA_OVERRIDE(int pram0, int pram1, int pram2) { Invoke<0xADBD44F6, void>(pram0, pram1, pram2); }
@@ -2968,7 +2938,7 @@ namespace Rage
 	static int UNK_0x655D350B(int pram0, int pram1, int pram2, int pram3) { return Invoke<0x655D350B, int>(pram0, pram1, pram2, pram3); }
 	static int SET_OBJECT_ANIMATOR_RATE(int pram0, int pram1) { return Invoke<0x0B4D9AFA, int>(pram0, pram1); }
 	static int SET_OBJECT_ANIMATOR_PHASE(int pram0, int pram1) { return Invoke<0xC0128653, int>(pram0, pram1); }
-	static int IS_MINIGAME_RUNNING() { return Invoke<0x117D7E71, int>(); }
+	static bool IS_MINIGAME_RUNNING() { return Invoke<0x117D7E71, bool>(); }
 	static int HAS_PROP_BEEN_DAMAGED(int pram0) { return Invoke<0x7151E7F0, int>(pram0); }
 	static int CREATE_OBJECT_ANIMATOR(int pram0, int pram1, int pram2, int pram3, int pram4) { return Invoke<0x856D5842, int>(pram0, pram1, pram2, pram3, pram4); }
 	static int UNK_0x188B6431(int pram0, int pram1, int pram2, int pram3, int pram4) { return Invoke<0x188B6431, int>(pram0, pram1, pram2, pram3, pram4); }
@@ -3061,7 +3031,7 @@ namespace Rage
 	static int HORSE_GET_CURR_FRESHNESS(int pram0) { return Invoke<0xB8665D8A, int>(pram0); }
 	static int GET_ACTOR_MAX_FRESHNESS(int pram0) { return Invoke<0xF1D2A13E, int>(pram0); }
 	static void UNK_0x9603D3B2(int pram0, int pram1) { Invoke<0x9603D3B2, void>(pram0, pram1); }
-	static int UNK_0x00EF33EF() { return Invoke<0x00EF33EF, int>(); }
+	static bool UNK_0x00EF33EF() { return Invoke<0x00EF33EF, bool>(); }
 	static int GET_CAMERA_FOV(int pram0) { return Invoke<0x7B302F36, int>(pram0); }
 	static void UPDATE_AIMRAMP(int pram0, int pram1, int pram2, int pram3, int pram4) { Invoke<0x86066A65, void>(pram0, pram1, pram2, pram3, pram4); }
 	static int UNK_0x9BD37A3D(int pram0) { return Invoke<0x9BD37A3D, int>(pram0); }
@@ -3070,24 +3040,7 @@ namespace Rage
 	static int UNK_0xE13B49BD(int pram0) { return Invoke<0xE13B49BD, int>(pram0); }
 	static void UNK_0x4486E8C7() { Invoke<0x4486E8C7, void>(); }
 	static int UNK_0x55E6227E(int pram0, int pram1) { return Invoke<0x55E6227E, int>(pram0, pram1); }
-	static void UNK_0x02DB5C93(int pram0, int pram1, int pram2) { Invoke<0x02DB5C93, void>(pram0, pram1, pram2); }
-	static void UNK_0x8DD4BC60(int pram0) { Invoke<0x8DD4BC60, void>(pram0); }
-	static void UNK_0xD5501B1B(int pram0, int pram1) { Invoke<0xD5501B1B, void>(pram0, pram1); }
-	static void UNK_0x1CB7C07D(int pram0) { Invoke<0x1CB7C07D, void>(pram0); }
-	static void UNK_0x4C3F3C71(int pram0) { Invoke<0x4C3F3C71, void>(pram0); }
-	static void UNK_0xAF7D851C() { Invoke<0xAF7D851C, void>(); }
-	static int RETURN_NULL() { return Invoke<0x95132289, int>(); }
-	static void UNK_0x18D7E687(int pram0, int pram1, int pram2, int pram3) { Invoke<0x18D7E687, void>(pram0, pram1, pram2, pram3); }
-	static void UNK_0xC3BE5695() { Invoke<0xC3BE5695, void>(); }
-	static void UNK_0xF38E8BBE() { Invoke<0xF38E8BBE, void>(); }
-	static void UNK_0xBD829B6B() { Invoke<0xBD829B6B, void>(); }
-	static void UNK_0x7306CC72(int pram0) { Invoke<0x7306CC72, void>(pram0); }
-	static void UNK_0x9631DFD0(int pram0, int pram1, int pram2) { Invoke<0x9631DFD0, void>(pram0, pram1, pram2); }
-	static void UNK_0x3BED7D9F() { Invoke<0x3BED7D9F, void>(); }
 	static void UNK_0xEB8325B3(int pram0) { Invoke<0xEB8325B3, void>(pram0); }
-	static void UNK_0x77C8F279(int pram0) { Invoke<0x77C8F279, void>(pram0); }
-	static void UNK_0x868E29C1(int pram0, int pram1) { Invoke<0x868E29C1, void>(pram0, pram1); }
-	static void UNK_0xCEED74A5() { Invoke<0xCEED74A5, void>(); }
 	static void UNK_0xE74C4851() { Invoke<0xE74C4851, void>(); }
 	static void SET_CAMERASHOT_CONTROL_SEQUENCE_VEC3(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6, int pram7, int pram8, int pram9) { Invoke<0x0229585E, void>(pram0, pram1, pram2, pram3, pram4, pram5, pram6, pram7, pram8, pram9); }
 	static void UNK_0x382C47C5(int pram0) { Invoke<0x382C47C5, void>(pram0); }
@@ -3095,7 +3048,7 @@ namespace Rage
 	static int SET_CUTSCENEINPUTS_TARGET_GUID(int pram0, int pram1, int pram2) { return Invoke<0xF74B5ADE, int>(pram0, pram1, pram2); }
 	static int UNK_0x8701F1F6() { return Invoke<0x8701F1F6, int>(); }
 	static int _GET_MAX_PLAYERS() { return Invoke<0xB5401D4A, int>(); }
-	static int UNK_0x80B30545() { return Invoke<0x80B30545, int>(); }
+	static bool UNK_0x80B30545() { return Invoke<0x80B30545, bool>(); }
 	static bool GET_LAST_HIT_ZONE(Actor Actor, int* out) { return Invoke<0x855F9A3B, bool>(Actor, *out); }
 	static const char* GET_WEAPON_DISPLAY_NAME(WeaponModel _WeaponModel) { return Invoke<0x35CD589C, const char*>(_WeaponModel); }
 	static Blip GET_BLIP_ON_OBJECT(Object Obj) { return Invoke<0xE3E30992, Blip>(Obj); }
@@ -3103,7 +3056,7 @@ namespace Rage
 	static Actor GET_LAST_ATTACK_TARGET(Actor actor) { return Invoke<0xEB40C2FC, Actor>(actor); }
 	static int SET_CAMERA_FOLLOW_ACTOR(Actor actor) { return Invoke<0x8EFDFE89, int>(actor); }
 	static int ADD_SCRIPT_USE_CONTEXT(const char* context, int pram0, Button b, int pram1, int pram2, int pram3, int pram4, int pram5, int pram6) { return Invoke<0xD7591B0E, int>(context, pram0, b, pram1, pram2, pram3, pram4, pram5, pram6); }
-	static Object GET_OBJECT_FROM_ACTOR(Actor actor) { return Invoke<0x4A2063EC, Object>(actor); }
-	static Blip GET_BLIP_ON_ACTOR(Actor actor) { return Invoke<0x1449EE9E, Blip>(actor); }
-	static const char* GET_LOCAL_PLAYER_NAME(int pram0) { return Invoke<0x0A297AFD, const char*>(pram0); }
+	static Object GET_OBJECT_FROM_ACTOR(Actor _Actor) { return Invoke<0x4A2063EC, Object>(_Actor); }
+	static Blip GET_BLIP_ON_ACTOR(Actor _Actor) { return Invoke<0x1449EE9E, Blip>(_Actor); }
+	static const char* GET_LOCAL_PLAYER_NAME() { return Invoke<0xA183D927, const char*>(); }
 }
