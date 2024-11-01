@@ -10,7 +10,6 @@
 using Player = int;
 using Actor = int;
 using Vehicle = int;
-using Weapon = int;
 using Object = int;
 using Train = int;
 using Pickup = int;
@@ -136,10 +135,9 @@ namespace Rage
 	static int UNK_0x5C8DD257(int pram0) { return Invoke<0x5C8DD257, int>(pram0); }
 	static Time GET_TIME_OF_DAY() { return Invoke<0x4E1DE7A5, Time>(); }
 	static int GET_HOUR(Time T) { return Invoke<0x2765C37E, int>(T); }
-	static int HUD_IS_FADED() { return Invoke<0x4EFFFC06, int>(); }
-	static int HUD_IS_FADING() { return Invoke<0xE5CC6F08, int>(); }
+	static bool HUD_IS_FADED() { return Invoke<0x4EFFFC06, bool>(); }
+	static bool HUD_IS_FADING() { return Invoke<0xE5CC6F08, bool>(); }
 	static void UNK_0x2E5F186B() { Invoke<0x2E5F186B, void>(); }
-	static int UNK_0xEF6BF96E() { return Invoke<0xEF6BF96E, int>(); }
 	static int NET_IS_UNLOCKED(int pram0) { return Invoke<0xC8B680B3, int>(pram0); }
 	static void PRINTFLOAT(int pram0) { Invoke<0xD48B90B6, void>(pram0); }
 	static void HUD_FADE_OUT(int pram0, int pram1, int pram2) { Invoke<0x52963366, void>(pram0, pram1, pram2); }
@@ -173,10 +171,8 @@ namespace Rage
 	static void _LOG_WARNING(char* message) { Invoke<0xFD25473E, void>(message); }
 	static int ADD_COLLECTABLE(int pram0, int pram1, int pram2) { return Invoke<0xF05D1566, int>(pram0, pram1, pram2); }
 	static int SHIFT_LEFT(int pram0, int pram1) { return Invoke<0x314CC6CD, int>(pram0, pram1); }
-	static int UNK_0x7AB722D8() { return Invoke<0x7AB722D8, int>(); }
-	static int UNK_0x84B0B5D6() { return Invoke<0x84B0B5D6, int>(); }
 	static int IS_ACTOR_ALIVE(Actor _Actor) { return Invoke<0x2F232639, int>(_Actor); }
-	static void SET_WEAPON_GOLD(Actor _Actor, Weapon _Weapon, bool _Gold) { Invoke<0xAE44869D, void>(_Actor, _Weapon, _Gold); }
+	static void SET_WEAPON_GOLD(Actor _Actor, WeaponModel _WeaponModel, bool _Gold) { Invoke<0xAE44869D, void>(_Actor, _WeaponModel, _Gold); }
 	static void UNK_0x7D6A8D4A(int pram0, int pram1) { Invoke<0x7D6A8D4A, void>(pram0, pram1); }
 	static int HAS_ACHIEVEMENT_BEEN_PASSED(int pram0) { return Invoke<0x136A5BE9, int>(pram0); }
 	static int AWARD_ACHIEVEMENT(int pram0) { return Invoke<0xCAA24B1A, int>(pram0); }
@@ -187,7 +183,7 @@ namespace Rage
 	static int SAVE_GAME(int pram0) { return Invoke<0x09C5D8D5, int>(pram0); }
 	static void UNK_0x17F34613(int pram0) { Invoke<0x17F34613, void>(pram0); }
 	static void UNK_0xED40F27D(int pram0) { Invoke<0xED40F27D, void>(pram0); }
-	static int UNK_0xBAB151CB() { return Invoke<0xBAB151CB, int>(); }
+	static bool UNK_0xBAB151CB() { return Invoke<0xBAB151CB, bool>(); }
 	static int UNK_0x5545C218(int pram0) { return Invoke<0x5545C218, int>(pram0); }
 	static int UNK_0xE623B382(int pram0) { return Invoke<0xE623B382, int>(pram0); }
 	static int GET_PLAYER_DEADEYE_POINTS(int pram0) { return Invoke<0x86B5C9E1, int>(pram0); }
@@ -206,7 +202,7 @@ namespace Rage
 	static int UNK_0x78A3CD3D(int pram0) { return Invoke<0x78A3CD3D, int>(pram0); }
 	static int UNK_0x7F4D5AE0(int pram0, int pram1) { return Invoke<0x7F4D5AE0, int>(pram0, pram1); }
 	static int IS_FRONTEND_DEATH(int pram0, int pram1, int pram2) { return Invoke<0xE224AC6F, int>(pram0, pram1, pram2); }
-	static Weapon GET_WEAPON_EQUIPPED(Actor _Actor, int _Index) { return Invoke<0x42C0FAAA, Weapon>(_Actor, _Index); }
+	static WeaponModel GET_WEAPON_EQUIPPED(Actor _Actor, int _WeaponWheelIndex) { return Invoke<0x42C0FAAA, WeaponModel>(_Actor, _WeaponWheelIndex); }
 	static int UNK_0x0E0EFB13(int pram0) { return Invoke<0x0E0EFB13, int>(pram0); }
 	static int UNK_0x2C23CBE7(int pram0) { return Invoke<0x2C23CBE7, int>(pram0); }
 	static int UNK_0x608DCAEF(int pram0, int pram1) { return Invoke<0x608DCAEF, int>(pram0, pram1); }
@@ -524,7 +520,7 @@ namespace Rage
 	static void UNK_0x9C80A3A4(int pram0, int pram1, int pram2, int pram3, int pram4) { Invoke<0x9C80A3A4, void>(pram0, pram1, pram2, pram3, pram4); }
 	static void EQUIP_ACCESSORY(int pram0, int pram1, int pram2) { Invoke<0x5A80659D, void>(pram0, pram1, pram2); }
 	static int UNK_0xA677B204(int pram0) { return Invoke<0xA677B204, int>(pram0); }
-	static bool ACTOR_HAS_WEAPON(Actor _Actor, Weapon _Weapon) { return Invoke<0x0D47CFBD, bool>(_Actor, _Weapon); }
+	static bool ACTOR_HAS_WEAPON(Actor _Actor, WeaponModel _WeaponModel) { return Invoke<0x0D47CFBD, bool>(_Actor, _WeaponModel); }
 	static int UNK_0xFEEC4EE2(int pram0) { return Invoke<0xFEEC4EE2, int>(pram0); }
 	static void ENABLE_WEATHER_SPHERE(int pram0, int pram1) { Invoke<0x17BCED9F, void>(pram0, pram1); }
 	static void UNK_0xC0556FB8(int pram0, int pram1) { Invoke<0xC0556FB8, void>(pram0, pram1); }
@@ -602,7 +598,7 @@ namespace Rage
 	static int UNK_0x8E0D7219(int pram0, int pram1) { return Invoke<0x8E0D7219, int>(pram0, pram1); }
 	static void UI_SEND_EVENT(const char* e) { Invoke<0xB58825F5, void>(e); }
 	static bool UNK_0xD8E31D42() { return Invoke<0xD8E31D42, bool>(); }
-	static int UNK_0x4BA92498() { return Invoke<0x4BA92498, int>(); }
+	static bool UNK_0x4BA92498() { return Invoke<0x4BA92498, bool>(); }
 	static void SET_CAMERA_POSITION(int pram0, int pram1, int pram2, int pram3) { Invoke<0x0B12CD8C, void>(pram0, pram1, pram2, pram3); }
 	static void SET_CAMERA_ORIENTATION(int pram0, int pram1, int pram2, int pram3, int pram4) { Invoke<0x486F4461, void>(pram0, pram1, pram2, pram3, pram4); }
 	static void SET_CAMERA_DIRECTION(Camera Cam, Vector3 Direction, bool Unk1) { Invoke<0xA8642E5E, void>(Cam, Direction, Unk1); }
@@ -1149,7 +1145,7 @@ namespace Rage
 	static int UNK_0xBEC2871A(int pram0) { return Invoke<0xBEC2871A, int>(pram0); }
 	static int UNK_0xEF4F4F20(int pram0) { return Invoke<0xEF4F4F20, int>(pram0); }
 	static int GET_ACTOR_VISION_XRAY(int pram0) { return Invoke<0xBFABD82E, int>(pram0); }
-	static int TIMESTEP() { return Invoke<0x50597EE2, int>(); }
+	static float TIMESTEP() { return Invoke<0x50597EE2, float>(); }
 	static int IS_PLAYER_USING_COVER(int pram0) { return Invoke<0x724A2931, int>(pram0); }
 	static int UNK_0x5B792331(int pram0, int pram1) { return Invoke<0x5B792331, int>(pram0, pram1); }
 	static int UNK_0xF6BF4242(int pram0) { return Invoke<0xF6BF4242, int>(pram0); }
@@ -1194,7 +1190,7 @@ namespace Rage
 	static int GET_CURVE_NAME(int pram0) { return Invoke<0x9A933060, int>(pram0); }
 	static void UNK_0x7B07D449() { Invoke<0x7B07D449, void>(); }
 	static int UNK_0x0B40BBE3(int pram0, int pram1, int pram2) { return Invoke<0x0B40BBE3, int>(pram0, pram1, pram2); }
-	static int GET_SLOT_ACTOR(int pram0) { return Invoke<0xDB9B49D8, int>(pram0); }
+	static Actor GET_SLOT_ACTOR(int _SlotId) { return Invoke<0xDB9B49D8, Actor>(_SlotId); }
 	static int UNK_0x579C2014(int pram0) { return Invoke<0x579C2014, int>(pram0); }
 	static void UNK_0xA6403262(int pram0, int pram1) { Invoke<0xA6403262, void>(pram0, pram1); }
 	static void UI_ENTER(const char* uiLayer) { Invoke<0x594F2657, void>(uiLayer); }
@@ -1581,7 +1577,7 @@ namespace Rage
 	static void UNK_0x88943B5B(int pram0, int pram1) { Invoke<0x88943B5B, void>(pram0, pram1); }
 	static int UNK_0x941FC468(int pram0) { return Invoke<0x941FC468, int>(pram0); }
 	static void GET_GRINGO_ACTIVATION_SPHERE(int pram0, int pram1, int pram2) { Invoke<0xADA2EA30, void>(pram0, pram1, pram2); }
-	static int UNK_0x8EB0B2AD() { return Invoke<0x8EB0B2AD, int>(); }
+	static bool UNK_0x8EB0B2AD() { return Invoke<0x8EB0B2AD, bool>(); }
 	static void SET_CAMERA_TARGET_OBJECT(int pram0, int pram1, int pram2) { Invoke<0xDBD1AE22, void>(pram0, pram1, pram2); }
 	static int UNK_0xBFD6AE3D(int pram0) { return Invoke<0xBFD6AE3D, int>(pram0); }
 	static int GRINGO_QUERY_PROP(int pram0, int pram1) { return Invoke<0x2A7B1EFE, int>(pram0, pram1); }
@@ -1655,7 +1651,7 @@ namespace Rage
 	static void UNK_0x88249424(int pram0, int pram1, int pram2) { Invoke<0x88249424, void>(pram0, pram1, pram2); }
 	static int UNK_0x81F24788() { return Invoke<0x81F24788, int>(); }
 	static int UNK_0xA80C6DE6(int pram0) { return Invoke<0xA80C6DE6, int>(pram0); }
-	static int GET_TIME_ACCELERATION() { return Invoke<0xC87F16A8, int>(); }
+	static float GET_TIME_ACCELERATION() { return Invoke<0xC87F16A8, float>(); }
 	static int GET_NUM_PLAYERS() { return Invoke<0x0F99A8BC, int>(); }
 	static float _GET_FRAME_TIME_2() { return Invoke<0x49F96787, float>(); }
 	static int NET_GET_NET_TIME() { return Invoke<0xFF8DA25D, int>(); }
@@ -1717,8 +1713,8 @@ namespace Rage
 	static void UNK_0x49053A94(int pram0, int pram1) { Invoke<0x49053A94, void>(pram0, pram1); }
 	static void UI_UNFOCUS(const char* uiLayer) { Invoke<0x0ACEA059, void>(uiLayer); }
 	static int UNK_0xBA89F5EA(int pram0) { return Invoke<0xBA89F5EA, int>(pram0); }
-	static const char* GET_SLOT_NAME(int SlotID) { return Invoke<0x0C984130, const char*>(SlotID); }
-	static int UNK_0xC0FC4B57() { return Invoke<0xC0FC4B57, int>(); }
+	static const char* GET_SLOT_NAME(int _SlotId) { return Invoke<0x0C984130, const char*>(_SlotId); }
+	static bool UNK_0xC0FC4B57() { return Invoke<0xC0FC4B57, bool>(); }
 	static int NET_IS_HOST_OF_THIS_SCRIPT() { return Invoke<0x6D403720, int>(); }
 	static void UNK_0x2547029C(int pram0, int pram1) { Invoke<0x2547029C, void>(pram0, pram1); }
 	static void UNK_0x46C39437(int pram0, int pram1, int pram2, int pram3, int pram4, int pram5) { Invoke<0x46C39437, void>(pram0, pram1, pram2, pram3, pram4, pram5); }
@@ -1804,7 +1800,7 @@ namespace Rage
 	static int LINK_OBJECT_ANIMATOR_TO_ACTOR(int pram0, int pram1, int pram2) { return Invoke<0xBEDB066C, int>(pram0, pram1, pram2); }
 	static void ADD_CAMERA_COLLISION_EXCLUSION(int pram0, int pram1, int pram2) { Invoke<0x5BBFA4D7, void>(pram0, pram1, pram2); }
 	static void PRINT_SMALL_FORMAT(const char* _Text1, const char* _Text2, const char* _Text3, const char* _Text4, const char* _Text5, const char* _Text6, int _Unk0, bool _Unk1, int _Unk2) { Invoke<0xBBBDFF7C, void>(_Text1, _Text2, _Text3, _Text4, _Text5, _Text6, _Unk0, _Unk1, _Unk2); }
-	static void _SET_ACTOR_INFINITE_AMMO(Actor _Actor, Weapon _Weapon, bool _Infinite) { Invoke<0x4FE2B586, void>(_Actor, _Weapon, _Infinite); }
+	static void _SET_ACTOR_INFINITE_AMMO(Actor _Actor, WeaponModel _WeaponModel, bool _Infinite) { Invoke<0x4FE2B586, void>(_Actor, _WeaponModel, _Infinite); }
 	static Layout GET_EVENT_LAYOUT() { return Invoke<0xD938B523, Layout>(); }
 	static int IS_EVENT_VALID(int pram0) { return Invoke<0x4911EB99, int>(pram0); }
 	static int UNK_0xB64DDA6F(int pram0) { return Invoke<0xB64DDA6F, int>(pram0); }
@@ -2098,7 +2094,7 @@ namespace Rage
 	static void UNK_0xA6C4E59F(int pram0, int pram1, int pram2) { Invoke<0xA6C4E59F, void>(pram0, pram1, pram2); }
 	static void UNK_0xEA06907B(int pram0, int pram1, int pram2) { Invoke<0xEA06907B, void>(pram0, pram1, pram2); }
 	static void UNK_0xA2597101(int pram0, int pram1, int pram2) { Invoke<0xA2597101, void>(pram0, pram1, pram2); }
-	static int UNK_0x629E2E88() { return Invoke<0x629E2E88, int>(); }
+	static bool UNK_0x629E2E88() { return Invoke<0x629E2E88, bool>(); }
 	static int COMBAT_CLASS_REQUEST_GET_ACTOR() { return Invoke<0x0EDD5D43, int>(); }
 	static void COMBAT_CLASS_REQUEST_COMPLETED() { Invoke<0xE66AD206, void>(); }
 	static void SET_ACTOR_ALLOW_WEAPON_REACTION_FLEE(int pram0, int pram1) { Invoke<0xBAF9D599, void>(pram0, pram1); }
@@ -2864,7 +2860,7 @@ namespace Rage
 	static void UNK_0x651F6299(int pram0) { Invoke<0x651F6299, void>(pram0); }
 	static int UNK_0x4A721118(int pram0) { return Invoke<0x4A721118, int>(pram0); }
 	static int UNK_0x4500B98A(int pram0) { return Invoke<0x4500B98A, int>(pram0); }
-	static int GET_WEAPON_GOLD(Actor Actor, Weapon Weapon) { return Invoke<0x6DBD1DDB, int>(Actor, Weapon); }
+	static int GET_WEAPON_GOLD(Actor _Actor, WeaponModel _WeaponModel) { return Invoke<0x6DBD1DDB, int>(_Actor, _WeaponModel); }
 	static int UNK_0x3AE1062C() { return Invoke<0x3AE1062C, int>(); }
 	static bool _IS_ACTOR_AMMO_INFINITE(Actor Actor, int pram1) { return Invoke<0xC666B987, bool>(Actor, pram1); }
 	static void READY_ITEM(const char* ItemName, Actor Actor) { Invoke<0x2B00A643, void>(ItemName, Actor); }
@@ -3101,7 +3097,7 @@ namespace Rage
 	static int _GET_MAX_PLAYERS() { return Invoke<0xB5401D4A, int>(); }
 	static int UNK_0x80B30545() { return Invoke<0x80B30545, int>(); }
 	static bool GET_LAST_HIT_ZONE(Actor Actor, int* out) { return Invoke<0x855F9A3B, bool>(Actor, *out); }
-	static const char* GET_WEAPON_DISPLAY_NAME(Weapon _Weapon) { return Invoke<0x22E09FC0, const char*>(_Weapon); }
+	static const char* GET_WEAPON_DISPLAY_NAME(WeaponModel _WeaponModel) { return Invoke<0x35CD589C, const char*>(_WeaponModel); }
 	static Blip GET_BLIP_ON_OBJECT(Object Obj) { return Invoke<0xE3E30992, Blip>(Obj); }
 	static int NET_GET_SESSION_GAMER_COUNT() { return Invoke<0x7AB65B0C, int>(); }
 	static Actor GET_LAST_ATTACK_TARGET(Actor actor) { return Invoke<0xEB40C2FC, Actor>(actor); }

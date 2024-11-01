@@ -1765,6 +1765,7 @@ enum ActorModel
 
 enum WeaponModel : int
 {
+    WEAPON_INVALID = -1,
     WEAPON_PISTOL_Volcanic,
     WEAPON_PISTOL_SemiAuto,
     WEAPON_PISTOL_HighPower,
@@ -1802,7 +1803,9 @@ enum WeaponModel : int
     WEAPON_SHOTGUN_Blunderbuss,
     WEAPON_THROWN_HolyWater,
     WEAPON_THROWN_ZombieBait,
-    WEAPON_THROWN_ZombieBoomBait
+    WEAPON_THROWN_ZombieBoomBait,
+
+    WEAPON_NUM
 };
 
 
