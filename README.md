@@ -1,8 +1,7 @@
-![RDRNativeDB](https://github.com/user-attachments/assets/e5635ea2-066e-446d-9ffc-ce43cfbd6af6)
-
+![RDRNativeDB](https://github.com/user-attachments/assets/b52df08d-c604-4000-bb09-1f18a5df8328)
 
 # 🐴 Red Dead Redemption PC Natives DB
 
-Here is an incomplete (and a bit dirty) list of Natives used for Red Dead Redemption on PC.
+An almost complete ist of Natives used in Red Dead Redemption PC port.
 
-This list needs could be improved a lot by doing some research, I will maintain this list updated, but if you have some modding skills feel free to requests improvements !
+This list needs could be improved by doing some research, I will maintain this list updated, but if you have some modding skills feel free to requests improvements !
