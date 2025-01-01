@@ -4,4 +4,4 @@
 
 An almost complete list of Natives used in Red Dead Redemption PC port.
 
-This list needs could be improved by doing some research, I will maintain this list updated, but if you have some modding skills feel free to requests improvements !
+This list could be improved by doing some research, I will maintain this list updated, but if you have some modding skills feel free to requests improvements !
